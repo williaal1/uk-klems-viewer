@@ -1,0 +1,41 @@
+/* Common Wealth — self-hosted web fonts. First cut, 2026-10-05.
+ *
+ * Three faces, all SIL OFL 1.1, all served from ../fonts/ (no CDN):
+ *   "CW Heading"  Archivo, subset, width axis pinned at 84, weight 300-700
+ *                 -> open stand-in for PP Formula Semi Condensed (headings, big numbers)
+ *   "CW Body"     Inter, subset, optical size pinned at 14, weight 300-700
+ *                 -> open stand-in for Neue Haas Unica Light (body text)
+ *   "JetBrains Mono"  the brand's own label face (OFL), weights 300 400 500 700
+ *
+ * size-adjust on CW Heading scales Archivo up to match PP Formula's tall x-height
+ * (PP Formula x-height 0.650 em vs Archivo 0.526 em; cap height 0.816 vs 0.686; measured
+ * from the desktop font file, which is not shipped). 119% is the compromise that matched the
+ * live site's headline widths and heights in the comparison in analysis/ and fonts/FONTS.md.
+ *
+ * TO SWAP IN THE REAL BRAND FONTS (once licences are confirmed): add @font-face rules for
+ * "PP Formula Semi Condensed" and "Neue Haas Unica" below (no size-adjust needed), then change
+ * --font-heading, --font-body, --weight-heading and --tracking-body in cw-tokens.css.
+ * Nothing else in the kit names a font family.
+ */
+
+@font-face {
+  font-family: "CW Heading";
+  src: url("../fonts/cw-heading-archivo-w84.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+  size-adjust: 119%;
+}
+
+@font-face {
+  font-family: "CW Body";
+  src: url("../fonts/cw-body-inter-opsz14.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face { font-family: "JetBrains Mono"; src: url("../fonts/JetBrainsMono-Light.woff2") format("woff2");   font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: "JetBrains Mono"; src: url("../fonts/JetBrainsMono-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "JetBrains Mono"; src: url("../fonts/JetBrainsMono-Medium.woff2") format("woff2");  font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "JetBrains Mono"; src: url("../fonts/JetBrainsMono-Bold.woff2") format("woff2");    font-weight: 700; font-style: normal; font-display: swap; }

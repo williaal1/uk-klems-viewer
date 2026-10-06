@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KLEMS Viewer</title>
+  <link rel="icon" href="cw/assets/favicon.png">
+  <link rel="stylesheet" href="cw/css/cw-fonts.css">
+  <link rel="stylesheet" href="cw/css/cw-tokens.css">
+  <link rel="stylesheet" href="cw/css/cw-base.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="cw-masthead">
+    <div class="cw-masthead__inner">
+      <span class="cw-masthead__home"><img class="cw-masthead__logo" src="cw/assets/cw-monogram-white.svg" alt="Common Wealth"></span>
+      <span class="masthead-title">KLEMS Viewer</span>
+    </div>
+  </header>
+  <main id="app">
+    <section class="shelves-pane" aria-label="The 63 industries of the US economy in 2017, on shelves by kind of industry">
+      <div class="intro">
+        <h1>The US economy, 2017</h1>
+        <p class="cw-label intro-sub">63 industries · size = value added · select one for its production function</p>
+      </div>
+      <div id="bookcase"></div>
+      <p class="cw-label source">Source: BEA-BLS Integrated Industry-Level Production Account (April 2025 release).</p>
+    </section>
+    <aside id="panel" class="panel" hidden aria-label="Industry readout"></aside>
+  </main>
+  <div id="tip" class="cw-tooltip" hidden></div>
+  <script type="module" src="js/bookcase.js"></script>
+</body>
+</html>

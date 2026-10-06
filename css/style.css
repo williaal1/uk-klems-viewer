@@ -1,0 +1,144 @@
+/* KLEMS Viewer, on the Common Wealth web kit (cw/css). Colours, type and spacing come from kit tokens only;
+ * no raw colour values in this file. Factor colours below are app roles mapped onto the CW palette
+ * (Claude's provisional mapping, 2026-10-05). */
+
+:root {
+  --k: var(--cw-blue);         --k-ink: var(--color-on-dark);
+  --l: var(--cw-green-1);      --l-ink: var(--color-on-accent);
+  --e: var(--cw-pink-1);       --e-ink: var(--color-text);
+  --m: var(--cw-purple-1);     --m-ink: var(--color-text);
+  --s: var(--cw-dark-purple);  --s-ink: var(--color-on-dark);
+  --c: var(--cw-black);        --c-ink: var(--color-on-dark);
+}
+
+/* ── Page frame ── */
+.cw-masthead__inner { display: flex; align-items: center; gap: var(--space-4); min-height: var(--nav-height); padding: 0 var(--gutter); }
+.masthead-title { font-family: var(--font-label); font-size: var(--size-label-lg); font-weight: var(--weight-label-strong); }
+#app { display: flex; height: calc(100vh - var(--nav-height)); }
+.shelves-pane { flex: 1; min-width: 0; overflow: auto; padding: var(--space-5) var(--gutter) var(--space-4); }
+.intro h1 { font-size: var(--size-h2); margin: 0 0 var(--space-2); }
+.intro-sub { margin: 0 0 var(--space-4); }
+#bookcase { width: 100%; }
+.source { margin: var(--space-3) 0 0; max-width: none; }
+
+/* ── The bookcase (SVG, drawn in screen pixels) ── */
+.bookcase { display: block; overflow: visible; width: auto; max-width: none; height: auto; }   /* drawn at its own pixel size: the kit's .cw-chart and svg rules would stretch it */
+.bookcase .shelf-bg { fill: var(--color-panel); }
+.bookcase .plank { stroke: var(--color-rule); stroke-width: 2px; }
+.cw-chart .shelf-label { font-weight: 700; }
+.cw-chart .shelf-value { font-weight: var(--weight-label); }
+.bookcase .string { stroke: var(--color-rule); stroke-width: 1px; }
+.bookcase .card { fill: var(--cw-white); stroke: var(--color-rule); stroke-width: 1px; }
+.bookcase .eyelet { fill: var(--cw-white); stroke: var(--color-rule); stroke-width: 1px; }
+.cw-chart .tag-text { font-weight: var(--weight-label-strong); }
+.bookcase .sphere { fill: var(--color-accent); stroke: var(--cw-black); stroke-width: 1px; }   /* black ring: green on white is 2.32:1 */
+.bookcase .ind, .bookcase .tag { cursor: pointer; }
+.bookcase .ind.hover .sphere { fill: var(--cw-green-2); }
+.bookcase .ind.selected .sphere { fill: var(--cw-black); }
+.bookcase .ind:focus { outline: none; }
+.bookcase .ind:focus-visible .sphere { stroke: var(--color-focus); stroke-width: 3px; }
+.cw-chart text.emoji { font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif; pointer-events: none; }
+#tip { position: fixed; z-index: 10; max-width: 280px; }
+
+/* ── Readout panel ── */
+.panel { flex: none; width: fit-content; min-width: 400px; max-width: 760px; overflow-y: auto; background: var(--color-bg);
+  border-left: var(--border); padding: 0 var(--space-5) var(--space-6); }
+.panel[hidden] { display: none; }
+.panel header { position: sticky; top: 0; background: var(--color-bg); padding-top: var(--space-4); z-index: 1; }
+.panel h2 { font-size: 1.75rem; margin: 0 var(--space-7) var(--space-1) 0; }
+.panel h3 { font-family: var(--font-heading); font-weight: var(--weight-heading); font-size: var(--size-h4); line-height: var(--line-heading);
+  letter-spacing: 0; margin: var(--space-6) 0 var(--space-3); border-top: var(--border); padding-top: var(--space-4); }
+.panel h4 { font-family: var(--font-label); font-size: var(--size-label); font-weight: 700; margin: var(--space-4) 0 var(--space-2); }
+.panel .muted { color: var(--color-text); font-weight: var(--weight-label); }
+.panel h3 .muted, .panel h4 .muted { font-family: var(--font-label); font-size: var(--size-label); letter-spacing: normal; }
+.panel header > .muted { font-family: var(--font-label); font-size: var(--size-label); }
+.close { position: absolute; top: var(--space-4); right: 0; width: 32px; height: 32px; padding: 0; border: var(--border); border-radius: 50%;
+  background: var(--cw-white); color: var(--color-text); font: 400 18px/1 var(--font-label); cursor: pointer; }
+.close:hover { background: var(--color-highlight); }
+
+/* Page tabs: the kit's segmented chips, small */
+.tabs { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: var(--space-3) 0 var(--space-2); padding-bottom: var(--space-3); border-bottom: var(--border); }
+.tabs button { min-height: 32px; padding: 0 var(--space-3); font-family: var(--font-label); font-size: var(--size-label); font-weight: var(--weight-label-strong);
+  color: var(--color-text); background: var(--cw-white); border: var(--border); border-radius: var(--radius-pill); cursor: pointer; }
+.tabs button:hover { background: var(--color-highlight); }
+.tabs button[aria-selected="true"] { background: var(--cw-black); color: var(--color-on-dark); }
+.page h3:first-child, .page .kpis:first-child { margin-top: var(--space-4); }
+.page h3:first-child { border-top: 0; padding-top: 0; }
+
+/* Headline numbers */
+.kpis, .gap { display: flex; flex-wrap: wrap; gap: var(--space-3) var(--space-6); margin: var(--space-3) 0; }
+.kpis div, .gap div { display: flex; flex-direction: column; gap: 2px; }
+.kpis span, .gap span { font-family: var(--font-label); font-size: var(--size-label); }
+.kpis b, .gap b { font-family: var(--font-heading); font-weight: var(--weight-heading); font-size: var(--size-h3); line-height: 1.1; }
+
+/* Factor bar and chips */
+.stack { display: flex; height: 20px; border: var(--border); margin: var(--space-2) 0 var(--space-3); }
+.stack i { display: block; height: 100%; }
+.chip { display: inline-block; width: 20px; height: 20px; line-height: 20px; text-align: center; border-radius: 50%; margin-right: var(--space-2);
+  font-family: var(--font-label); font-size: var(--size-label); font-weight: 700; border: 1px solid var(--cw-black); }
+.chip[data-f="K"] { background: var(--k); color: var(--k-ink); } .chip[data-f="L"] { background: var(--l); color: var(--l-ink); }
+.chip[data-f="E"] { background: var(--e); color: var(--e-ink); } .chip[data-f="M"] { background: var(--m); color: var(--m-ink); }
+.chip[data-f="S"] { background: var(--s); color: var(--s-ink); } .chip[data-f="C"] { background: var(--c); color: var(--c-ink); }
+
+/* Tables */
+table { width: 100%; border-collapse: collapse; font-size: var(--size-caption); font-variant-numeric: tabular-nums; }
+td, th { padding: var(--space-1) var(--space-2); vertical-align: top; text-align: left; }
+th { font-family: var(--font-label); font-size: var(--size-label); font-weight: 700; white-space: nowrap; }
+.num { text-align: right; white-space: nowrap; }
+th.num, .grid th:not(:first-child) { text-align: right; }
+.grid thead th { background: var(--color-table-head); border-top: var(--border); border-bottom: var(--border); }
+.grid tbody td { border-bottom: 1px solid var(--color-panel); }
+.grid tr.total td { border-top: var(--border); font-weight: var(--weight-strong); }
+.grid.sub td:first-child { padding-left: var(--space-4); }
+.legend tr.go { cursor: pointer; }
+.legend tr.go:hover td { background: var(--color-highlight); }
+.legend td { padding: 6px var(--space-2); border-bottom: 1px solid var(--color-panel); }
+td.arrow { width: 16px; }
+.barcell { width: 140px; }
+.barcell i, .bar i { display: block; height: 10px; margin-top: 5px; border: 1px solid var(--cw-black); }
+.bar { display: block; }
+.bar i { height: 4px; margin-top: 3px; background: var(--k); border: 0; }
+.collapsible.collapsed tr.more { display: none; }
+.toggle { margin-top: var(--space-2); min-height: 32px; padding: 0 var(--space-3); font-family: var(--font-label); font-size: var(--size-label);
+  font-weight: var(--weight-label-strong); color: var(--color-text); background: var(--cw-white); border: var(--border); border-radius: var(--radius-pill); cursor: pointer; }
+.toggle:hover { background: var(--color-highlight); }
+.na { color: var(--color-text); }
+.note, .src { font-family: var(--font-label); font-size: var(--size-label); font-weight: var(--weight-label); margin: var(--space-2) 0; }
+.panel .note, .panel .src { width: 0; min-width: 100%; max-width: none; }   /* wrap to the tables' width, never widen the panel */
+.sides { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5); margin-top: var(--space-2); }
+.side-sum { font-family: var(--font-label); font-size: var(--size-label); margin-bottom: var(--space-2); }
+.occ td:first-child { width: 60%; }
+
+/* E / M / S purchase tables */
+.ems tr.band td { font-family: var(--font-label); font-size: var(--size-label); font-weight: 700; background: var(--color-panel); padding-top: var(--space-2); }
+.ems tr.grp td:first-child { padding-left: 22px; position: relative; }
+.ems tr.grp.can-open { cursor: pointer; }
+.ems tr.grp.can-open td:first-child::before { content: '+'; position: absolute; left: 8px; font-family: var(--font-label); }
+.ems tr.grp.can-open.open td:first-child::before { content: '−'; }
+.ems tr.grp.can-open:hover td { background: var(--color-highlight); }
+.ems tr.item td { font-size: var(--size-label); }
+.ems tr.item td:first-child { padding-left: 36px; }
+
+/* ── Phones and narrow windows: one scrolling page ── */
+@media (max-width: 759px) {
+  #app { display: block; height: auto; }
+  .shelves-pane { overflow: visible; padding: var(--space-4) var(--gutter); }
+  .intro h1 { font-size: var(--size-h3); }
+  .panel { width: 100%; min-width: 0; max-width: none; overflow: visible; border-left: 0; border-top: var(--border);
+    padding: 0 var(--gutter) var(--space-6); min-height: 100svh; }   /* tall enough to scroll to the top of the screen */
+  .sides { grid-template-columns: 1fr; }
+  .barcell { width: 72px; }
+  table { font-size: var(--size-label); }
+  td, th { padding: 3px var(--space-1); }
+  th { white-space: normal; }
+  .grid td:first-child, .legend td:first-child, .ems td:first-child { overflow-wrap: break-word; }   /* break a word only if it can't fit */
+  /* Five-column capital tables: each asset's name on its own line, its four numbers in even columns beneath */
+  .grid.wide thead tr, .grid.wide tbody tr { display: grid; grid-template-columns: repeat(4, 1fr); }
+  .grid.wide th:first-child { display: none; }
+  .grid.wide tbody tr { border-bottom: 1px solid var(--color-panel); padding: var(--space-1) 0; }
+  .grid.wide tbody td { border-bottom: 0; }
+  .grid.wide tbody td:first-child { grid-column: 1 / -1; padding-bottom: 0; }
+  .grid.wide tr.total { border-top: var(--border); }
+  .grid.wide tr.total td { border-top: 0; }
+  .grid.wide.collapsed tr.more { display: none; }
+}

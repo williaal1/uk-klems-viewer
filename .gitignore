@@ -1,0 +1,6 @@
+research/
+_checks/
+__pycache__/
+.DS_Store
+NOTES.md
+.claude/

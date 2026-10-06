@@ -1,0 +1,644 @@
+{
+ "meta": {
+  "year": 2017,
+  "units": "millions of current dollars",
+  "measure": "Production-account value added (= capital compensation + labor compensation)",
+  "source": "Data Sources/Economics/National Accounts/Federal Statistical Agencies/BEA/bea-bls-production-account/data/production_account.csv",
+  "source_release": "BEA-BLS Integrated Industry-Level Production Account, released 2025-04-25 (I-O annual update of 2024-09-26)",
+  "total_value_added": 19761716.0,
+  "checks": "VA = K + L and GO = VA + E + M + S per industry, within $5m",
+  "note": "Production-account value added differs from GDP-by-industry value added: the 63 sum to $19,761.7bn vs $19,612.1bn GDP (bea-klems, All industries). Private industries come out lower (gap tracks taxes on production, not exactly); government comes out higher (capital compensation GF $484bn, GSL $907bn). Cause not yet confirmed from BEA documentation."
+ },
+ "industries": [
+  {
+   "code": "GSL",
+   "name": "State and local",
+   "short_name": "State & local government",
+   "emoji": "\ud83c\udfeb",
+   "naics_2017": null,
+   "value_added": 2352452.0,
+   "sector": "G",
+   "sector_name": "Government"
+  },
+  {
+   "code": "531",
+   "name": "Real estate",
+   "short_name": "Real estate",
+   "emoji": "\ud83c\udfe0",
+   "naics_2017": "531",
+   "value_added": 2331614.0,
+   "sector": "FIRE",
+   "sector_name": "Finance, insurance & real estate"
+  },
+  {
+   "code": "GF",
+   "name": "Federal",
+   "short_name": "Federal government",
+   "emoji": "\ud83c\udfdb\ufe0f",
+   "naics_2017": null,
+   "value_added": 973849.0,
+   "sector": "G",
+   "sector_name": "Government"
+  },
+  {
+   "code": "44RT",
+   "name": "Retail trade",
+   "short_name": "Retail trade",
+   "emoji": "\ud83d\uded2",
+   "naics_2017": "44, 45",
+   "value_added": 968627.0,
+   "sector": "44RT",
+   "sector_name": "Retail trade"
+  },
+  {
+   "code": "42",
+   "name": "Wholesale trade",
+   "short_name": "Wholesale trade",
+   "emoji": "\ud83d\udce6",
+   "naics_2017": "42",
+   "value_added": 965437.0,
+   "sector": "42",
+   "sector_name": "Wholesale trade"
+  },
+  {
+   "code": "5412OP",
+   "name": "Miscellaneous professional, scientific, and technical services",
+   "short_name": "Other professional services",
+   "emoji": "\ud83d\udcca",
+   "naics_2017": "5412-5414, 5416-5419",
+   "value_added": 862445.0,
+   "sector": "PROF",
+   "sector_name": "Professional & business services"
+  },
+  {
+   "code": "23",
+   "name": "Construction",
+   "short_name": "Construction",
+   "emoji": "\ud83c\udfd7\ufe0f",
+   "naics_2017": "23",
+   "value_added": 838364.0,
+   "sector": "23",
+   "sector_name": "Construction"
+  },
+  {
+   "code": "621",
+   "name": "Ambulatory health care services",
+   "short_name": "Ambulatory health care",
+   "emoji": "\ud83e\ude7a",
+   "naics_2017": "621",
+   "value_added": 708185.0,
+   "sector": "6",
+   "sector_name": "Education & health care"
+  },
+  {
+   "code": "521CI",
+   "name": "Federal Reserve banks, credit intermediation, and related activities",
+   "short_name": "Banking & credit",
+   "emoji": "\ud83c\udfe6",
+   "naics_2017": "521, 522",
+   "value_added": 646836.0,
+   "sector": "FIRE",
+   "sector_name": "Finance, insurance & real estate"
+  },
+  {
+   "code": "622HO",
+   "name": "Hospitals and nursing and residential care facilities",
+   "short_name": "Hospitals & nursing homes",
+   "emoji": "\ud83c\udfe5",
+   "naics_2017": "622, 623",
+   "value_added": 628320.0,
+   "sector": "6",
+   "sector_name": "Education & health care"
+  },
+  {
+   "code": "524",
+   "name": "Insurance carriers and related activities",
+   "short_name": "Insurance",
+   "emoji": "\u2602\ufe0f",
+   "naics_2017": "524",
+   "value_added": 545014.0,
+   "sector": "FIRE",
+   "sector_name": "Finance, insurance & real estate"
+  },
+  {
+   "code": "561",
+   "name": "Administrative and support services",
+   "short_name": "Administrative services",
+   "emoji": "\ud83d\udccb",
+   "naics_2017": "561",
+   "value_added": 543408.0,
+   "sector": "PROF",
+   "sector_name": "Professional & business services"
+  },
+  {
+   "code": "513",
+   "name": "Broadcasting and telecommunications",
+   "short_name": "Broadcasting & telecom",
+   "emoji": "\ud83d\udce1",
+   "naics_2017": "515, 517",
+   "value_added": 424785.0,
+   "sector": "51",
+   "sector_name": "Information"
+  },
+  {
+   "code": "81",
+   "name": "Other services, except government",
+   "short_name": "Other services",
+   "emoji": "\ud83d\udc87",
+   "naics_2017": "81",
+   "value_added": 419768.0,
+   "sector": "81",
+   "sector_name": "Other services"
+  },
+  {
+   "code": "722",
+   "name": "Food services and drinking places",
+   "short_name": "Food services",
+   "emoji": "\ud83c\udf54",
+   "naics_2017": "722",
+   "value_added": 388709.0,
+   "sector": "7",
+   "sector_name": "Arts, recreation, lodging & food"
+  },
+  {
+   "code": "55",
+   "name": "Management of companies and enterprises",
+   "short_name": "Management of companies",
+   "emoji": "\ud83d\udc54",
+   "naics_2017": "55",
+   "value_added": 368625.0,
+   "sector": "PROF",
+   "sector_name": "Professional & business services"
+  },
+  {
+   "code": "325",
+   "name": "Chemical products",
+   "short_name": "Chemical products",
+   "emoji": "\ud83e\uddea",
+   "naics_2017": "325",
+   "value_added": 339978.0,
+   "sector": "31ND",
+   "sector_name": "Nondurable manufacturing"
+  },
+  {
+   "code": "5415",
+   "name": "Computer systems design and related services",
+   "short_name": "Computer systems design",
+   "emoji": "\ud83d\udcbb",
+   "naics_2017": "5415",
+   "value_added": 321661.0,
+   "sector": "PROF",
+   "sector_name": "Professional & business services"
+  },
+  {
+   "code": "22",
+   "name": "Utilities",
+   "short_name": "Utilities",
+   "emoji": "\u26a1",
+   "naics_2017": "22",
+   "value_added": 284379.0,
+   "sector": "22",
+   "sector_name": "Utilities"
+  },
+  {
+   "code": "523",
+   "name": "Securities, commodity contracts, and investments",
+   "short_name": "Securities & investments",
+   "emoji": "\ud83d\udcc8",
+   "naics_2017": "523",
+   "value_added": 282147.0,
+   "sector": "FIRE",
+   "sector_name": "Finance, insurance & real estate"
+  },
+  {
+   "code": "311FT",
+   "name": "Food and beverage and tobacco products",
+   "short_name": "Food, beverage & tobacco",
+   "emoji": "\ud83e\udd6b",
+   "naics_2017": "311, 312",
+   "value_added": 252004.0,
+   "sector": "31ND",
+   "sector_name": "Nondurable manufacturing"
+  },
+  {
+   "code": "5411",
+   "name": "Legal services",
+   "short_name": "Legal services",
+   "emoji": "\u2696\ufe0f",
+   "naics_2017": "5411",
+   "value_added": 251036.0,
+   "sector": "PROF",
+   "sector_name": "Professional & business services"
+  },
+  {
+   "code": "334",
+   "name": "Computer and electronic products",
+   "short_name": "Computer & electronic products",
+   "emoji": "\ud83d\udda5\ufe0f",
+   "naics_2017": "334",
+   "value_added": 248364.0,
+   "sector": "33DG",
+   "sector_name": "Durable manufacturing"
+  },
+  {
+   "code": "61",
+   "name": "Educational services",
+   "short_name": "Education",
+   "emoji": "\ud83c\udf93",
+   "naics_2017": "61",
+   "value_added": 244711.0,
+   "sector": "6",
+   "sector_name": "Education & health care"
+  },
+  {
+   "code": "511",
+   "name": "Publishing industries, except internet (includes software)",
+   "short_name": "Publishing (incl. software)",
+   "emoji": "\ud83d\udcda",
+   "naics_2017": "511, 516",
+   "value_added": 234850.0,
+   "sector": "51",
+   "sector_name": "Information"
+  },
+  {
+   "code": "514",
+   "name": "Data processing, internet publishing, and other information services",
+   "short_name": "Data processing & internet",
+   "emoji": "\ud83c\udf10",
+   "naics_2017": "518, 519",
+   "value_added": 212634.0,
+   "sector": "51",
+   "sector_name": "Information"
+  },
+  {
+   "code": "532RL",
+   "name": "Rental and leasing services and lessors of intangible assets",
+   "short_name": "Rental & leasing",
+   "emoji": "\ud83d\udd11",
+   "naics_2017": "532, 533",
+   "value_added": 200006.0,
+   "sector": "FIRE",
+   "sector_name": "Finance, insurance & real estate"
+  },
+  {
+   "code": "484",
+   "name": "Truck transportation",
+   "short_name": "Truck transportation",
+   "emoji": "\ud83d\ude9a",
+   "naics_2017": "484",
+   "value_added": 177432.0,
+   "sector": "48TW",
+   "sector_name": "Transportation & warehousing"
+  },
+  {
+   "code": "3361MV",
+   "name": "Motor vehicles, bodies and trailers, and parts",
+   "short_name": "Motor vehicles",
+   "emoji": "\ud83d\ude97",
+   "naics_2017": "3361, 3362, 3363",
+   "value_added": 158910.0,
+   "sector": "33DG",
+   "sector_name": "Durable manufacturing"
+  },
+  {
+   "code": "211",
+   "name": "Oil and gas extraction",
+   "short_name": "Oil & gas extraction",
+   "emoji": "\ud83d\udee2\ufe0f",
+   "naics_2017": "211",
+   "value_added": 152768.0,
+   "sector": "21",
+   "sector_name": "Mining"
+  },
+  {
+   "code": "721",
+   "name": "Accommodation",
+   "short_name": "Accommodation",
+   "emoji": "\ud83c\udfe8",
+   "naics_2017": "721",
+   "value_added": 151590.0,
+   "sector": "7",
+   "sector_name": "Arts, recreation, lodging & food"
+  },
+  {
+   "code": "3364OT",
+   "name": "Other transportation equipment",
+   "short_name": "Other transport equipment",
+   "emoji": "\ud83d\ude80",
+   "naics_2017": "3364, 3365, 3366, 3369",
+   "value_added": 150811.0,
+   "sector": "33DG",
+   "sector_name": "Durable manufacturing"
+  },
+  {
+   "code": "111CA",
+   "name": "Farms",
+   "short_name": "Farms",
+   "emoji": "\ud83c\udf3e",
+   "naics_2017": "111, 112",
+   "value_added": 148848.0,
+   "sector": "11",
+   "sector_name": "Agriculture, forestry & fishing"
+  },
+  {
+   "code": "333",
+   "name": "Machinery",
+   "short_name": "Machinery",
+   "emoji": "\u2699\ufe0f",
+   "naics_2017": "333",
+   "value_added": 147412.0,
+   "sector": "33DG",
+   "sector_name": "Durable manufacturing"
+  },
+  {
+   "code": "332",
+   "name": "Fabricated metal products",
+   "short_name": "Fabricated metals",
+   "emoji": "\ud83d\udd29",
+   "naics_2017": "332",
+   "value_added": 144142.0,
+   "sector": "33DG",
+   "sector_name": "Durable manufacturing"
+  },
+  {
+   "code": "624",
+   "name": "Social assistance",
+   "short_name": "Social assistance",
+   "emoji": "\ud83e\udd1d",
+   "naics_2017": "624",
+   "value_added": 127201.0,
+   "sector": "6",
+   "sector_name": "Education & health care"
+  },
+  {
+   "code": "487OS",
+   "name": "Other transportation and support activities",
+   "short_name": "Other transportation",
+   "emoji": "\ud83d\udcec",
+   "naics_2017": "487, 488, 492",
+   "value_added": 124710.0,
+   "sector": "48TW",
+   "sector_name": "Transportation & warehousing"
+  },
+  {
+   "code": "711AS",
+   "name": "Performing arts, spectator sports, museums, and related activities",
+   "short_name": "Performing arts & sports",
+   "emoji": "\ud83c\udfad",
+   "naics_2017": "711, 712",
+   "value_added": 120751.0,
+   "sector": "7",
+   "sector_name": "Arts, recreation, lodging & food"
+  },
+  {
+   "code": "324",
+   "name": "Petroleum and coal products",
+   "short_name": "Petroleum & coal products",
+   "emoji": "\u26fd",
+   "naics_2017": "324",
+   "value_added": 110179.0,
+   "sector": "31ND",
+   "sector_name": "Nondurable manufacturing"
+  },
+  {
+   "code": "481",
+   "name": "Air transportation",
+   "short_name": "Air transportation",
+   "emoji": "\u2708\ufe0f",
+   "naics_2017": "481",
+   "value_added": 106983.0,
+   "sector": "48TW",
+   "sector_name": "Transportation & warehousing"
+  },
+  {
+   "code": "512",
+   "name": "Motion picture and sound recording industries",
+   "short_name": "Motion picture & sound",
+   "emoji": "\ud83c\udfac",
+   "naics_2017": "512",
+   "value_added": 94967.0,
+   "sector": "51",
+   "sector_name": "Information"
+  },
+  {
+   "code": "339",
+   "name": "Miscellaneous manufacturing",
+   "short_name": "Miscellaneous manufacturing",
+   "emoji": "\ud83e\uddf8",
+   "naics_2017": "339",
+   "value_added": 86379.0,
+   "sector": "33DG",
+   "sector_name": "Durable manufacturing"
+  },
+  {
+   "code": "713",
+   "name": "Amusements, gambling, and recreation industries",
+   "short_name": "Amusement & recreation",
+   "emoji": "\ud83c\udfa2",
+   "naics_2017": "713",
+   "value_added": 77069.0,
+   "sector": "7",
+   "sector_name": "Arts, recreation, lodging & food"
+  },
+  {
+   "code": "326",
+   "name": "Plastics and rubber products",
+   "short_name": "Plastics & rubber",
+   "emoji": "\ud83e\uddf4",
+   "naics_2017": "326",
+   "value_added": 76787.0,
+   "sector": "31ND",
+   "sector_name": "Nondurable manufacturing"
+  },
+  {
+   "code": "493",
+   "name": "Warehousing and storage",
+   "short_name": "Warehousing",
+   "emoji": "\ud83d\uddc4\ufe0f",
+   "naics_2017": "493",
+   "value_added": 60983.0,
+   "sector": "48TW",
+   "sector_name": "Transportation & warehousing"
+  },
+  {
+   "code": "331",
+   "name": "Primary metals",
+   "short_name": "Primary metals",
+   "emoji": "\u26d3\ufe0f",
+   "naics_2017": "331",
+   "value_added": 59640.0,
+   "sector": "33DG",
+   "sector_name": "Durable manufacturing"
+  },
+  {
+   "code": "327",
+   "name": "Nonmetallic mineral products",
+   "short_name": "Nonmetallic minerals",
+   "emoji": "\ud83e\uddf1",
+   "naics_2017": "327",
+   "value_added": 58351.0,
+   "sector": "33DG",
+   "sector_name": "Durable manufacturing"
+  },
+  {
+   "code": "335",
+   "name": "Electrical equipment, appliances, and components",
+   "short_name": "Electrical equipment",
+   "emoji": "\ud83d\udd0c",
+   "naics_2017": "335",
+   "value_added": 57780.0,
+   "sector": "33DG",
+   "sector_name": "Durable manufacturing"
+  },
+  {
+   "code": "322",
+   "name": "Paper products",
+   "short_name": "Paper products",
+   "emoji": "\ud83e\uddfb",
+   "naics_2017": "322",
+   "value_added": 55778.0,
+   "sector": "31ND",
+   "sector_name": "Nondurable manufacturing"
+  },
+  {
+   "code": "213",
+   "name": "Support activities for mining",
+   "short_name": "Mining support",
+   "emoji": "\ud83d\udd27",
+   "naics_2017": "213",
+   "value_added": 53711.0,
+   "sector": "21",
+   "sector_name": "Mining"
+  },
+  {
+   "code": "562",
+   "name": "Waste management and remediation services",
+   "short_name": "Waste management",
+   "emoji": "\u267b\ufe0f",
+   "naics_2017": "562",
+   "value_added": 51408.0,
+   "sector": "PROF",
+   "sector_name": "Professional & business services"
+  },
+  {
+   "code": "212",
+   "name": "Mining, except oil and gas",
+   "short_name": "Mining (excl. oil & gas)",
+   "emoji": "\u26cf\ufe0f",
+   "naics_2017": "212",
+   "value_added": 49887.0,
+   "sector": "21",
+   "sector_name": "Mining"
+  },
+  {
+   "code": "482",
+   "name": "Rail transportation",
+   "short_name": "Rail transportation",
+   "emoji": "\ud83d\ude86",
+   "naics_2017": "482",
+   "value_added": 45810.0,
+   "sector": "48TW",
+   "sector_name": "Transportation & warehousing"
+  },
+  {
+   "code": "485",
+   "name": "Transit and ground passenger transportation",
+   "short_name": "Transit & ground passenger",
+   "emoji": "\ud83d\ude8c",
+   "naics_2017": "485",
+   "value_added": 42391.0,
+   "sector": "48TW",
+   "sector_name": "Transportation & warehousing"
+  },
+  {
+   "code": "486",
+   "name": "Pipeline transportation",
+   "short_name": "Pipeline transportation",
+   "emoji": "\ud83d\udca8",
+   "naics_2017": "486",
+   "value_added": 40928.0,
+   "sector": "48TW",
+   "sector_name": "Transportation & warehousing"
+  },
+  {
+   "code": "323",
+   "name": "Printing and related support activities",
+   "short_name": "Printing",
+   "emoji": "\ud83d\udda8\ufe0f",
+   "naics_2017": "323",
+   "value_added": 40552.0,
+   "sector": "31ND",
+   "sector_name": "Nondurable manufacturing"
+  },
+  {
+   "code": "113FF",
+   "name": "Forestry, fishing, and related activities",
+   "short_name": "Forestry & fishing",
+   "emoji": "\ud83c\udf32",
+   "naics_2017": "113, 114, 115",
+   "value_added": 37621.0,
+   "sector": "11",
+   "sector_name": "Agriculture, forestry & fishing"
+  },
+  {
+   "code": "321",
+   "name": "Wood products",
+   "short_name": "Wood products",
+   "emoji": "\ud83e\udeb5",
+   "naics_2017": "321",
+   "value_added": 35568.0,
+   "sector": "33DG",
+   "sector_name": "Durable manufacturing"
+  },
+  {
+   "code": "337",
+   "name": "Furniture and related products",
+   "short_name": "Furniture",
+   "emoji": "\ud83e\ude91",
+   "naics_2017": "337",
+   "value_added": 28855.0,
+   "sector": "33DG",
+   "sector_name": "Durable manufacturing"
+  },
+  {
+   "code": "313TT",
+   "name": "Textile mills and textile product mills",
+   "short_name": "Textiles",
+   "emoji": "\ud83e\uddf5",
+   "naics_2017": "313, 314",
+   "value_added": 17296.0,
+   "sector": "31ND",
+   "sector_name": "Nondurable manufacturing"
+  },
+  {
+   "code": "483",
+   "name": "Water transportation",
+   "short_name": "Water transportation",
+   "emoji": "\ud83d\udea2",
+   "naics_2017": "483",
+   "value_added": 13780.0,
+   "sector": "48TW",
+   "sector_name": "Transportation & warehousing"
+  },
+  {
+   "code": "315AL",
+   "name": "Apparel and leather and allied products",
+   "short_name": "Apparel & leather",
+   "emoji": "\ud83d\udc55",
+   "naics_2017": "315, 316",
+   "value_added": 9434.0,
+   "sector": "31ND",
+   "sector_name": "Nondurable manufacturing"
+  },
+  {
+   "code": "525",
+   "name": "Funds, trusts, and other financial vehicles",
+   "short_name": "Funds, trusts & other finance",
+   "emoji": "\ud83d\udcb0",
+   "naics_2017": "525",
+   "value_added": 6796.0,
+   "sector": "FIRE",
+   "sector_name": "Finance, insurance & real estate"
+  }
+ ]
+}

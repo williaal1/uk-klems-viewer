@@ -1,0 +1,151 @@
+/* Common Wealth — design tokens for web apps. First cut, provisional, 2026-10-05.
+ *
+ * Every colour, typeface and size a CW-styled app uses is defined here. App code reads
+ * these custom properties (see js/cw-tokens.js); it never hard-codes a value.
+ *
+ * Sources:
+ *   Colours — "CW identity masterdoc.pdf" p.1 and "CW colours.txt" (Work Documentation/
+ *             Production/Design/). EXACT palette only: no off-palette colour exists in this
+ *             file. White (#FFFFFF) is not a labelled swatch in the guide; it is the page
+ *             ground of the live site and the light end of the guide's duotones.
+ *   Type roles — guide p.1: headings PP Formula Semi Condensed / Neue Haas Unica Light,
+ *             body Neue Haas Unica Light (web), labels and buttons JetBrains Mono Light.
+ *             Open stand-ins are used for the first two (see cw-fonts.css).
+ *   Sizes, tracking, radii, borders, spacing — measured on common-wealth.org, 2026-10-05
+ *             (analysis/CW-VISUAL-ANALYSIS.md section 2, analysis/sources/site/).
+ *   Anything marked PROVISIONAL is Claude's choice, awaiting Alex.
+ *
+ * Contrast rule for this kit: see TRAILHEAD.md "Failing pairs". In short, green 1 is never
+ * text; #777777 is never small text.
+ */
+
+:root {
+  /* ── Brand palette (exact hex from the guide) ── */
+  --cw-black: #333333;
+  --cw-mid-grey: #777777;
+  --cw-light-grey: #f5f5f5;
+  --cw-white: #ffffff;
+  --cw-green-1: #00c0a3;
+  --cw-green-2: #a0ecd0;
+  --cw-green-3: #e4f9f4;
+  --cw-purple-1: #9ca4fc;
+  --cw-purple-2: #bfc4fd;
+  --cw-purple-3: #e1e4fe;
+  --cw-pink-1: #fd676a;
+  --cw-pink-2: #ffa69e;
+  --cw-pink-3: #fff1f0;
+  --cw-yellow: #edf67d;
+  --cw-blue: #0c425b;
+  --cw-dark-purple: #5c328a;
+
+  /* ── Roles (what app code should use) ── */
+  --color-bg: var(--cw-white);                 /* page ground (Alex, 2026-10-05) */
+  --color-panel: var(--cw-light-grey);         /* behind charts, and raised panels */
+  --color-text: var(--cw-black);
+  --color-text-large-muted: var(--cw-mid-grey);/* ONLY text of 24px+ (or 18.66px bold+): 4.48:1 on white, 4.11 on panel */
+  --color-link: var(--cw-blue);                /* always underlined */
+  --color-link-hover: var(--cw-black);
+  --color-rule: var(--cw-black);               /* 1px borders, axes */
+  --color-grid: var(--cw-mid-grey);            /* hairline gridlines only; decorative */
+  --color-accent: var(--cw-green-1);           /* FILLS, decoration, chart line A. Never text. */
+  --color-on-accent: var(--cw-black);          /* text on green 1: 5.46:1. White on green 1 is 2.32:1 */
+  --color-on-dark: var(--cw-white);            /* text on black or blue */
+  --color-accent-on-dark: var(--cw-green-1);   /* green on black is 5.46:1: allowed for text on dark grounds */
+  --color-highlight: var(--cw-green-3);        /* result band, hover fill */
+  --color-tile-1: var(--cw-green-2);           /* headline-number tiles (the site uses watercolour textures; flat fills here) */
+  --color-tile-2: var(--cw-purple-2);
+  --color-tile-3: var(--cw-light-grey);
+  --color-table-head: var(--cw-pink-3);        /* as in CW articles */
+  --color-alert: var(--cw-pink-3);             /* PROVISIONAL: alert background, always with a 1px black border */
+  --color-focus: var(--cw-dark-purple);        /* keyboard focus on light grounds: 9.22:1 white, 8.45 panel */
+  --color-focus-on-dark: var(--cw-green-1);    /* keyboard focus on black: 5.46:1 */
+  --color-disabled: var(--cw-mid-grey);        /* disabled controls only (exempt from WCAG contrast) */
+
+  /* ── Chart series ──
+   * Series 1 is "Your CPI" (green 1, drawn thick), series 2 the published headline (black).
+   * Green 1 on a light ground is 2.12-2.32:1, under the 3:1 non-text minimum. That cannot be
+   * fixed inside the palette; the kit compensates with weight, outlined markers and direct
+   * labels (see TRAILHEAD "Failing pairs"). */
+  --series-1: var(--cw-green-1);
+  --series-2: var(--cw-black);
+  --series-3: var(--cw-blue);                  /* 1.17:1 from black: tell apart by dash, not colour */
+  --series-4: var(--cw-dark-purple);           /* 1.37:1 from black: tell apart by dash and marker */
+  --series-fill-1: var(--cw-purple-2);         /* bars/areas, with a 1px black outline */
+  --series-fill-2: var(--cw-green-2);
+  --series-fill-3: var(--cw-green-3);
+  --series-fill-4: var(--cw-purple-3);
+  --stroke-axis: 1px;                          /* CW dashboard: 1px #333 */
+  --stroke-grid: 0.5px;
+  --stroke-series-1: 3px;                      /* >= 2.5px by decision (Alex, 2026-10-05) */
+  --stroke-series: 2px;
+  --dot-radius: 4px;
+  --dash-3: 6 4;
+  --dash-4: 2 3;
+
+  /* ── Type ──
+   * Open stand-ins today. To use the real brand fonts, add their @font-face rules in
+   * cw-fonts.css and replace the first family in each stack below; also set --weight-heading
+   * to 400 (PP Formula Regular). Everything else follows. */
+  --font-heading: "CW Heading", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "CW Body", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-label: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+
+  --weight-heading: 350;      /* Archivo stand-in; use 400 for PP Formula Regular */
+  --weight-body: 300;         /* guide: Light for web */
+  --weight-strong: 600;       /* emphasis inside body text */
+  --weight-label: 300;        /* guide: JetBrains Mono Light */
+  --weight-label-strong: 400; /* buttons, tags as on the site; 700 for chart titles */
+
+  /* Sizes: site values, with the site's own clamp() behaviour on small screens */
+  --size-display: clamp(3rem, 8vw, 6.4rem);       /* 102.4px at 1280 */
+  --size-h1: clamp(2.25rem, 1rem + 4vw, 3rem);    /* 48px */
+  --size-h2: clamp(1.75rem, 1rem + 2.5vw, 2.25rem);/* 36px */
+  --size-h3: 1.5rem;                              /* 24px */
+  --size-h4: 1.25rem;                             /* 20px, PROVISIONAL (site h4 is 24px) */
+  --size-stat: 2.4rem;                            /* 38.4px headline-number tile */
+  --size-body: 1.125rem;                          /* 18px (articles) */
+  --size-body-small: 1rem;                        /* 16px */
+  --size-caption: 0.875rem;                       /* 14px */
+  --size-label-lg: 1rem;                          /* 16px mono: nav, medium buttons */
+  --size-label: 0.75rem;                          /* 12px mono: tags, small buttons */
+  --size-chart: 0.75rem;                          /* 12px mono chart text (CW uses 10px; Alex: 11-12px) */
+
+  --line-display: 0.9;
+  --line-heading: 1.1;
+  --line-body: 1.4;
+  --tracking-display: -0.047em;   /* -4.8px at 102.4px */
+  --tracking-heading: -0.04em;    /* -1.6px at 36-48px */
+  --tracking-h3: -0.027em;        /* -0.8px at 30px */
+  --tracking-body: 0.012em;       /* opens Inter ~1% to match Neue Haas Unica Light's line breaks (open stand-in only; use 0 for the real font) */
+  --tracking-label: -0.02em;      /* -0.32px at 16px (buttons) */
+
+  /* ── Space and layout ── */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --measure: 62ch;           /* reading column; the site's article column is 588px */
+  --page-max: 1200px;        /* content width; page = this + 2 gutters = 1280px */
+  --gutter: 16px;            /* 40px from 768px up; the site's own values */
+  --nav-height: 75px;
+  --touch: 44px;            /* minimum height of buttons and inputs */
+  /* Webflow breakpoints the site uses (cannot be variables in @media): 991px, 767px, 479px */
+
+  /* ── Shape ── */
+  --radius-box: 0;           /* cards, panels, inputs: square */
+  --radius-pill: 999px;      /* buttons, tags, chips (site: 24-32px on 26-54px-high pills) */
+  --border: 1px solid var(--color-rule);
+
+  /* ── Motion ── */
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+  --duration: 150ms;
+}
+
+@media (min-width: 768px) {
+  :root { --gutter: 40px; }
+}
