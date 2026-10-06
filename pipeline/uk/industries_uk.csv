@@ -1,0 +1,105 @@
+code,ons_description,sic_codes,sector_key,note
+A01,"Crop And Animal Production, Hunting And Related Service Activities",01,11,
+A02,Forestry And Logging,02,11,
+A03,Fishing And Aquaculture,03,11,US viewer pairs fishing with forestry; UK data splits them
+B05,Mining Of Coal And Lignite,05,21,
+B06 & B07,Extraction Of Crude Petroleum And Natural Gas & Mining Of Metal Ores,"06, 07",21,Combined by ONS; oil and gas dominates
+B08,Other Mining And Quarrying,08,21,
+B09,Mining Support Service Activities,09,21,
+C101,Processing and preserving of meat and production of meat products,10.1,31ND,
+C102_3,"Processing and preserving of fish, crustaceans, molluscs, fruit and vegetables","10.2, 10.3",31ND,
+C104,Manufacture of vegetable and animal oils and fats,10.4,31ND,
+C105,Manufacture of dairy products,10.5,31ND,
+C106,"Manufacture of grain mill products, starches and starch products",10.6,31ND,
+C107,Manufacture of bakery and farinaceous products,10.7,31ND,
+C108,Manufacture of other food products,10.8,31ND,
+C109,Manufacture of prepared animal feeds,10.9,31ND,
+C1101T1106 & C12,Manufacture of alcoholic beverages & Tobacco Products,"11.01-11.06, 12",31ND,Emoji covers drink only; tobacco half is a stretch
+C1107,Manufacture of soft drinks; production of mineral waters and other bottled waters,11.07,31ND,
+C13,Manufacture Of Textiles,13,31ND,
+C14,Manufacture Of Wearing Apparel,14,31ND,
+C15,Manufacture Of Leather And Related Products,15,31ND,
+C16,"Manufacture Of Wood & Products Of Wood & Cork, Except Furniture; Manuf. Of Articles Of Straw",16,33DG,Wood products are durable in the US split (NAICS 321)
+C17,Manufacture Of Paper And Paper Products,17,31ND,
+C18,Printing And Reproduction Of Recorded Media,18,31ND,
+C19,Manufacture Of Coke And Refined Petroleum Products,19,31ND,
+C203,"Manufacture of paints, varnishes and similar coatings, printing ink and mastics",20.3,31ND,
+C204,"Manufacture of soap & detergents, cleaning & polishing, perfumes & toilet preparations",20.4,31ND,
+C205,Manufacture of other chemical products,20.5,31ND,
+C20A,"Manufacture of industrial gases, inorganics and fertilisers (inorganic chemicals) - 20.11/13/15","20.11, 20.13, 20.15",31ND,Short name is long-winded; ONS title is 'inorganics and fertilisers'
+C20B,Manufacture of petrochemicals - 20.14/16/17/60,"20.14, 20.16, 20.17, 20.60",31ND,Emoji is a stretch (generic factory)
+C20C,"Manufacture of dyestuffs, agro-chemicals - 20.12/20","20.12, 20.20",31ND,Emoji covers agrochemicals only; dyes missing
+C21,Manufacture Of Basic Pharmaceutical Products And Pharmaceutical Preparations,21,31ND,"US counts pharma in chemicals (NAICS 3254), so nondurable"
+C22,Manufacture Of Rubber And Plastic Products,22,31ND,Nondurable to match US 326
+C235_6,"Manufacture of cement, lime, plaster and articles of concrete, cement and plaster","23.5, 23.6",33DG,
+C23OTHER,"Manufacture of glass, refractory, clay, porcelain, ceramic, stone products - 23.1-4/7-9","23.1-23.4, 23.7-23.9",33DG,
+C241T243,Manufacture of basic iron and steel,24.1-24.3,33DG,
+C244_5,Manufacture of other basic metals and casting,"24.4, 24.5",33DG,Emoji is a stretch
+C25,Manufacture of fabricated metal products,25,33DG,
+C26,"Manufacture Of Computer, Electronic And Optical Products",26,33DG,
+C27,Manufacture Of Electrical Equipment,27,33DG,
+C28,Manufacture Of Machinery And Equipment N.E.C.,28,33DG,
+C29,"Manufacture Of Motor Vehicles, Trailers And Semi-Trailers",29,33DG,
+C301,Building of ships and boats,30.1,33DG,
+C303,Manufacture of air and spacecraft and related machinery,30.3,33DG,
+C30OTHER,Manufacture of other transport equipment - 30.2/4/9,"30.2, 30.4, 30.9",33DG,Emoji is a stretch (motorbike stands in for a mixed bag)
+C31,Manufacture Of Furniture,31,33DG,
+C32,Other Manufacturing,32,33DG,
+C3315,Repair and maintenance of ships and boats,33.15,33DG,SIC puts repair in manufacturing; US NAICS would put it in other services (81). Kept in C by SIC section
+C3316,Repair and maintenance of aircraft and spacecraft,33.16,33DG,Same SIC-section-C judgement as C3315
+C33OTHER,Rest of repair; Installation - 33.11-14/17/19/20,"33.11-33.14, 33.17, 33.19, 33.20",33DG,Same SIC-section-C judgement as C3315
+D351,"Electric power generation, transmission and distribution",35.1,22,
+D352_3,Manufacture of gas; distribution of gaseous fuels through mains; steam and aircon supply,"35.2, 35.3",22,
+E36,"Water Collection, Treatment And Supply",36,22,Water supply -> Utilities (US NAICS 221 includes water)
+E37,Sewerage,37,22,Sewerage -> Utilities (US NAICS 221 includes sewage)
+E38,"Waste Collection, Treatment And Disposal Activities; Materials Recovery",38,PROF,"Waste -> Professional & business services, as the US viewer does for 562"
+E39,Remediation Activities And Other Waste Management Services,39,PROF,Same as E38; emoji is a stretch
+"F41, F42 & F43",Construction,"41, 42, 43",23,
+G45,Wholesale And Retail Trade And Repair Of Motor Vehicles And Motorcycles,45,44RT,Mixed: dealers (US retail 441) plus repair (US other services 8111) plus parts wholesale. Put in retail as one block
+G46,"Wholesale Trade, Except Of Motor Vehicles And Motorcycles",46,42,
+G47,"Retail Trade, Except Of Motor Vehicles And Motorcycles",47,44RT,
+H491_2,Rail transport,"49.1, 49.2",48TW,
+H493T495,"Land transport services and transport services via pipelines, excluding rail transport",49.3-49.5,48TW,"US splits truck, transit and pipelines; UK combines them"
+H50,Water Transport,50,48TW,
+H51,Air Transport,51,48TW,
+H52,Warehousing And Support Activities For Transportation,52,48TW,
+H53,Postal And Courier Activities,53,48TW,
+I55,Accommodation,55,7,
+I56,Food And Beverage Service Activities,56,7,
+J58,Publishing Activities,58,51,
+J59 & J60,"Motion Picture, Video & TV Programme Production, Sound Recording & Music Publishing Activities & Programming And Broadcasting Activities","59, 60",51,
+J61,Telecommunications,61,51,
+J62,"Computer Programming, Consultancy And Related Activities",62,51,In SIC section J so 51; the US viewer puts computer systems design in PROF. Alex may prefer PROF
+J63,Information Service Activities,63,51,
+K64,"Financial Service Activities, Except Insurance And Pension Funding",64,FIRE,
+K65.1-2 & K65.3,"Insurance, reinsurance and pension funding services, except compulsory social security","65.1, 65.2, 65.3",FIRE,
+K66,Activities Auxiliary To Financial Services And Insurance Activities,66,FIRE,
+L68BXL683,"Buying and selling, renting and operating of own or leased real estate, excluding imputed rent","68.1, 68.2 (excl. imputed rent)",FIRE,
+L68A,Owner-Occupiers' Housing,68.2 (imputed rent of owner-occupiers),FIRE,Imputed rent; the US viewer's real estate also includes housing
+L683,Real estate activities on a fee or contract basis,68.3,FIRE,Emoji is a stretch (sale tag)
+M691,Legal activities,69.1,PROF,
+M692,"Accounting, bookkeeping and auditing activities; tax consultancy",69.2,PROF,
+M70,Activities Of Head Offices; Management Consultancy Activities,70,PROF,Head offices and management consultancy
+M71,Architectural And Engineering Activities; Technical Testing And Analysis,71,PROF,
+M72,Scientific Research And Development,72,PROF,
+M73,Advertising And Market Research,73,PROF,
+M74,"Other Professional, Scientific And Technical Activities",74,PROF,Mixed bag; emoji is a stretch
+M75,Veterinary Activities,75,PROF,
+N77,Rental And Leasing Activities,77,PROF,SIC section N so PROF; the US viewer puts rental and leasing (532RL) in FIRE
+N78,Employment Activities,78,PROF,
+N79,"Travel Agency, Tour Operator And Other Reservation Service And Related Activities",79,PROF,
+N80,Security And Investigation Activities,80,PROF,
+N81,Services To Buildings And Landscape Activities,81,PROF,
+N82,"Office Administrative, Office Support And Other Business Support Activities",82,PROF,
+O84,Public Administration And Defence; Compulsory Social Security,84,G,Includes compulsory social security; no central/local split in UK SUT
+P85,Education,85,6,Mostly public in the UK; still sector 6
+Q86,Human Health Activities,86,6,
+Q87 & Q88,Residential Care & Social Work Activities,"87, 88",6,
+R90,"Creative, Arts And Entertainment Activities",90,7,
+R91,"Libraries, Archives, Museums And Other Cultural Activities",91,7,
+R92,Gambling And Betting Activities,92,7,
+R93,Sports Activities And Amusement And Recreation Activities,93,7,
+S94,Activities Of Membership Organisations,94,81,
+S95,Repair Of Computers And Personal And Household Goods,95,81,
+S96,Other Personal Service Activities,96,81,
+T97,Activities Of Households As Employers Of Domestic Personnel,97,81,Imputed output only; tiny industry. Emoji is a stretch

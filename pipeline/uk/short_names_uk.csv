@@ -1,0 +1,105 @@
+code,short_name,source
+A01,Farming,Claude draft 2026-10-06
+A02,Forestry,Claude draft 2026-10-06
+A03,Fishing & fish farming,Claude draft 2026-10-06
+B05,Coal mining,Claude draft 2026-10-06
+B06 & B07,"Oil, gas & metal ores",Claude draft 2026-10-06
+B08,Quarrying & other mining,Claude draft 2026-10-06
+B09,Mining support,Claude draft 2026-10-06
+C101,Meat processing,Claude draft 2026-10-06
+C102_3,"Fish, fruit & veg processing",Claude draft 2026-10-06
+C104,Oils & fats,Claude draft 2026-10-06
+C105,Dairy products,Claude draft 2026-10-06
+C106,Grain milling & starches,Claude draft 2026-10-06
+C107,Bakery & pasta,Claude draft 2026-10-06
+C108,Other food products,Claude draft 2026-10-06
+C109,Animal feed,Claude draft 2026-10-06
+C1101T1106 & C12,Alcoholic drinks & tobacco,Claude draft 2026-10-06
+C1107,Soft drinks & bottled water,Claude draft 2026-10-06
+C13,Textiles,Claude draft 2026-10-06
+C14,Clothing,Claude draft 2026-10-06
+C15,Leather & footwear,Claude draft 2026-10-06
+C16,Wood & cork products,Claude draft 2026-10-06
+C17,Paper products,Claude draft 2026-10-06
+C18,Printing,Claude draft 2026-10-06
+C19,Refined petroleum,Claude draft 2026-10-06
+C203,Paints & coatings,Claude draft 2026-10-06
+C204,"Soap, cleaning & cosmetics",Claude draft 2026-10-06
+C205,Other chemicals,Claude draft 2026-10-06
+C20A,Industrial gases & fertilisers,Claude draft 2026-10-06
+C20B,Petrochemicals,Claude draft 2026-10-06
+C20C,Dyes & agrochemicals,Claude draft 2026-10-06
+C21,Pharmaceuticals,Claude draft 2026-10-06
+C22,Rubber & plastics,Claude draft 2026-10-06
+C235_6,Cement & concrete,Claude draft 2026-10-06
+C23OTHER,"Glass, ceramics & stone",Claude draft 2026-10-06
+C241T243,Iron & steel,Claude draft 2026-10-06
+C244_5,Other metals & casting,Claude draft 2026-10-06
+C25,Fabricated metal products,Claude draft 2026-10-06
+C26,Computers & electronics,Claude draft 2026-10-06
+C27,Electrical equipment,Claude draft 2026-10-06
+C28,Machinery,Claude draft 2026-10-06
+C29,Motor vehicles,Claude draft 2026-10-06
+C301,Shipbuilding,Claude draft 2026-10-06
+C303,Aerospace,Claude draft 2026-10-06
+C30OTHER,Other transport equipment,Claude draft 2026-10-06
+C31,Furniture,Claude draft 2026-10-06
+C32,Other manufacturing,Claude draft 2026-10-06
+C3315,Ship repair,Claude draft 2026-10-06
+C3316,Aircraft repair,Claude draft 2026-10-06
+C33OTHER,Repair & installation,Claude draft 2026-10-06
+D351,Electricity,Claude draft 2026-10-06
+D352_3,Gas & heat supply,Claude draft 2026-10-06
+E36,Water supply,Claude draft 2026-10-06
+E37,Sewerage,Claude draft 2026-10-06
+E38,Waste collection & disposal,Claude draft 2026-10-06
+E39,Site remediation,Claude draft 2026-10-06
+"F41, F42 & F43",Construction,Claude draft 2026-10-06
+G45,Motor trades,Claude draft 2026-10-06
+G46,Wholesale,Claude draft 2026-10-06
+G47,Retail,Claude draft 2026-10-06
+H491_2,Rail transport,Claude draft 2026-10-06
+H493T495,Road transport & pipelines,Claude draft 2026-10-06
+H50,Shipping,Claude draft 2026-10-06
+H51,Air transport,Claude draft 2026-10-06
+H52,Warehousing & logistics,Claude draft 2026-10-06
+H53,Post & couriers,Claude draft 2026-10-06
+I55,Hotels & accommodation,Claude draft 2026-10-06
+I56,"Restaurants, pubs & catering",Claude draft 2026-10-06
+J58,Publishing,Claude draft 2026-10-06
+J59 & J60,"Film, TV & radio",Claude draft 2026-10-06
+J61,Telecoms,Claude draft 2026-10-06
+J62,Software & IT services,Claude draft 2026-10-06
+J63,Data & information services,Claude draft 2026-10-06
+K64,Banking & credit,Claude draft 2026-10-06
+K65.1-2 & K65.3,Insurance & pensions,Claude draft 2026-10-06
+K66,Fund management & brokers,Claude draft 2026-10-06
+L68BXL683,Property letting & trading,Claude draft 2026-10-06
+L68A,Owner-occupied housing,Claude draft 2026-10-06
+L683,Estate agents & property mgmt,Claude draft 2026-10-06
+M691,Legal services,Claude draft 2026-10-06
+M692,Accountancy & tax,Claude draft 2026-10-06
+M70,Head offices & consultancy,Claude draft 2026-10-06
+M71,Architecture & engineering,Claude draft 2026-10-06
+M72,Scientific R&D,Claude draft 2026-10-06
+M73,Advertising & market research,Claude draft 2026-10-06
+M74,"Design, photography & other",Claude draft 2026-10-06
+M75,Vets,Claude draft 2026-10-06
+N77,Rental & leasing,Claude draft 2026-10-06
+N78,Employment agencies,Claude draft 2026-10-06
+N79,Travel agents & tour operators,Claude draft 2026-10-06
+N80,Security & investigation,Claude draft 2026-10-06
+N81,Cleaning & grounds services,Claude draft 2026-10-06
+N82,Office & business support,Claude draft 2026-10-06
+O84,Public admin & defence,Claude draft 2026-10-06
+P85,Education,Claude draft 2026-10-06
+Q86,Health care,Claude draft 2026-10-06
+Q87 & Q88,Care homes & social work,Claude draft 2026-10-06
+R90,Arts & entertainment,Claude draft 2026-10-06
+R91,Libraries & museums,Claude draft 2026-10-06
+R92,Gambling & betting,Claude draft 2026-10-06
+R93,Sport & recreation,Claude draft 2026-10-06
+S94,Membership organisations,Claude draft 2026-10-06
+S95,Repair of computers & goods,Claude draft 2026-10-06
+S96,Personal services,Claude draft 2026-10-06
+T97,Households employing staff,Claude draft 2026-10-06

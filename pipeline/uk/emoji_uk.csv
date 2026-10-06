@@ -1,0 +1,105 @@
+code,emoji,why
+A01,🌾,farms
+A02,🌲,forestry
+A03,🐟,fishing
+B05,⛏️,mining
+B06 & B07,🛢️,oil and gas extraction
+B08,🪨,stone and rock
+B09,🔧,support activities for mining
+C101,🥩,meat
+C102_3,🥫,preserved food
+C104,🫒,cooking oils
+C105,🧀,dairy
+C106,🌽,grain mills
+C107,🍞,bakery
+C108,🍫,"sugar, chocolate, tea, other food"
+C109,🐄,animal feed
+C1101T1106 & C12,🍺,alcohol and tobacco
+C1107,🥤,soft drinks
+C13,🧵,textiles
+C14,👕,apparel
+C15,👞,shoes and leather goods
+C16,🪵,wood
+C17,🧻,paper
+C18,🖨️,printing
+C19,⛽,refined fuel
+C203,🎨,paint
+C204,🧼,soap and toiletries
+C205,🧪,chemicals
+C20A,⚗️,inorganic chemicals
+C20B,🏭,chemical plant
+C20C,🌱,agrochemicals
+C21,💊,medicines
+C22,🧴,plastics and rubber
+C235_6,🧱,"cement, concrete"
+C23OTHER,🏺,glass and ceramics
+C241T243,⛓️,primary metals
+C244_5,🪙,non-ferrous metals
+C25,🔩,fabricated metal
+C26,🖥️,computer and electronic products
+C27,🔌,electrical equipment
+C28,⚙️,machinery
+C29,🚗,cars
+C301,⛵,boats and ships
+C303,🚀,air and spacecraft
+C30OTHER,🏍️,"motorcycles, rail stock, military vehicles"
+C31,🪑,furniture
+C32,🧸,"toys, jewellery, medical devices"
+C3315,⚓,ship repair
+C3316,🛩️,aircraft repair
+C33OTHER,🛠️,repair and installation
+D351,⚡,electric power
+D352_3,🔥,gas and steam
+E36,🚰,tap water
+E37,🚽,sewers
+E38,♻️,waste and recycling
+E39,🚧,clean-up works
+"F41, F42 & F43",🏗️,construction
+G45,🚙,vehicle sales and repair
+G46,📦,wholesale trade
+G47,🛒,retail trade
+H491_2,🚆,rail
+H493T495,🚚,"road haulage, buses, taxis, pipelines"
+H50,🚢,water transport
+H51,✈️,air transport
+H52,🗄️,warehousing and logistics
+H53,📬,post and couriers
+I55,🏨,accommodation
+I56,🍔,food and drink service
+J58,📚,"publishing, includes software"
+J59 & J60,🎬,"film, TV and broadcasting"
+J61,📡,telecoms
+J62,💻,computer programming
+J63,🌐,data processing and internet
+K64,🏦,banking and credit
+K65.1-2 & K65.3,☂️,insurance
+K66,📈,investments and securities
+L68BXL683,🏢,commercial and residential property
+L68A,🏠,housing
+L683,🏷️,property agents
+M691,⚖️,law
+M692,🧮,accounting
+M70,👔,management
+M71,📐,architecture and engineering
+M72,🔬,research
+M73,📣,advertising
+M74,📷,design and photography
+M75,🐕,veterinary
+N77,🔑,rental and leasing
+N78,🪪,recruitment and staffing
+N79,🧳,travel
+N80,🔒,security
+N81,🧹,building cleaning and landscaping
+N82,📋,administrative support
+O84,🏛️,government
+P85,🎓,education
+Q86,🏥,"NHS, GPs and hospitals"
+Q87 & Q88,🤝,care and social work
+R90,🎭,performing arts
+R91,🖼️,museums and galleries
+R92,🎰,gambling
+R93,⚽,sport and leisure
+S94,👥,"unions, churches, clubs"
+S95,🧰,repair shops
+S96,💇,"hairdressing, laundry, funerals"
+T97,🧺,domestic staff
