@@ -321,6 +321,13 @@ sub = t29[(t29.occupation_level == 'sub_major')]
 occ_jobs = sub[sub.statistic == 'jobs'].set_index(['industry_code', 'occupation_code'])
 occ_mean = sub[sub.statistic == 'mean'].set_index(['industry_code', 'occupation_code'])
 OCC_ORDER = list(sub.drop_duplicates('occupation_code').occupation_code)
+
+def sentence_case(s):
+    """ONS publishes industry and occupation names in Title Case; show them in sentence case (acronyms kept). Wording unchanged."""
+    w = s.split(' ')
+    out = ' '.join([w[0]] + [t if (len(t) > 1 and t.isupper() and t != 'N.E.C.') else t.lower() for t in w[1:]])
+    return out.replace("Owner-Occupiers'", "Owner-occupiers'")
+
 OCC_TITLE = sub.drop_duplicates('occupation_code').set_index('occupation_code').occupation_name
 SUPERVISORY = {'11', '12'}                                              # SOC 2020 major group 1 sub-major groups
 
@@ -342,7 +349,7 @@ def occupations(code):
     rows = []
     for oc in OCC_ORDER:
         j = num(occ_jobs.value.get((s, oc))); m = num(occ_mean.value.get((s, oc))); cv = num(occ_mean.cv.get((s, oc))) if m is not None else None
-        rows.append({'code': oc, 'title': str(OCC_TITLE[oc]), 'employment': None if j is None else j * 1000, 'mean_wage': m, 'cv': cv})
+        rows.append({'code': oc, 'title': sentence_case(str(OCC_TITLE[oc])), 'employment': None if j is None else j * 1000, 'mean_wage': m, 'cv': cv})
     def side(rs):
         rs = sorted(rs, key=lambda d: (d['employment'] is None, -(d['employment'] or 0)))
         w = [r for r in rs if r['employment'] and r['mean_wage'] is not None]
@@ -415,7 +422,7 @@ ashe_cov = []
 for code in x.sort_values('GVA', ascending=False).index:
     r = x.loc[code]
     L = lab.loc[code]; ml = m_lab.loc[code]; mc = m_cap.loc[code]
-    industries.append({'code': code, 'file': files[code][:-5], 'name': L.ons_description, 'short_name': short[code], 'emoji': emoji[code],
+    industries.append({'code': code, 'file': files[code][:-5], 'name': sentence_case(L.ons_description), 'short_name': short[code], 'emoji': emoji[code],
                        'sic_codes': L.sic_codes, 'sector': L.sector_key, 'sector_name': SECTORS[L.sector_key], 'value_added': float(r.GVA)})
     notes = []
     s = r.section
@@ -476,7 +483,7 @@ for code in x.sort_values('GVA', ascending=False).index:
     prod_block = {'gross_output': float(r.P1), 'value_added': float(r.GVA), 'K': float(r.K), 'L': float(r.L), 'E': float(r.E), 'M': float(r.M), 'S': float(r.S),
                   'compensation_of_employees': float(r.D1), 'labour_mixed_income': float(r.lab_mi), 'taxes_on_production': float(r['D29-D39']),
                   'K_by_type': None, 'K_by_asset_class': None, 'L_by_education': L_edu, 'cali_group': cg}
-    out = {'code': code, 'name': L.ons_description, 'sic_codes': L.sic_codes, 'year': YEAR, 'currency': 'GBP', 'notes': notes,
+    out = {'code': code, 'name': sentence_case(L.ons_description), 'sic_codes': L.sic_codes, 'year': YEAR, 'currency': 'GBP', 'notes': notes,
            'production': prod_block, 'capital': cp, 'labor': labor, 'purchases': purchases(code), 'carbon': carbon_block}
     with open(os.path.join(OUT, files[code]), 'w', encoding='utf-8') as fh:
         json.dump(clean(out), fh, separators=(',', ':'), allow_nan=False, ensure_ascii=False)

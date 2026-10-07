@@ -34,7 +34,7 @@
   {
    "code": "L68A",
    "file": "L68A",
-   "name": "Owner-Occupiers' Housing",
+   "name": "Owner-occupiers' housing",
    "short_name": "Owner-occupied housing",
    "emoji": "🏠",
    "sic_codes": "68.2 (imputed rent of owner-occupiers)",
@@ -67,7 +67,7 @@
   {
    "code": "Q86",
    "file": "Q86",
-   "name": "Human Health Activities",
+   "name": "Human health activities",
    "short_name": "Health care",
    "emoji": "🏥",
    "sic_codes": "86",
@@ -78,7 +78,7 @@
   {
    "code": "O84",
    "file": "O84",
-   "name": "Public Administration And Defence; Compulsory Social Security",
+   "name": "Public administration and defence; compulsory social security",
    "short_name": "Public admin & defence",
    "emoji": "🏛️",
    "sic_codes": "84",
@@ -89,7 +89,7 @@
   {
    "code": "G47",
    "file": "G47",
-   "name": "Retail Trade, Except Of Motor Vehicles And Motorcycles",
+   "name": "Retail trade, except of motor vehicles and motorcycles",
    "short_name": "Retail",
    "emoji": "🛒",
    "sic_codes": "47",
@@ -100,7 +100,7 @@
   {
    "code": "G46",
    "file": "G46",
-   "name": "Wholesale Trade, Except Of Motor Vehicles And Motorcycles",
+   "name": "Wholesale trade, except of motor vehicles and motorcycles",
    "short_name": "Wholesale",
    "emoji": "📦",
    "sic_codes": "46",
@@ -111,7 +111,7 @@
   {
    "code": "K64",
    "file": "K64",
-   "name": "Financial Service Activities, Except Insurance And Pension Funding",
+   "name": "Financial service activities, except insurance and pension funding",
    "short_name": "Banking & credit",
    "emoji": "🏦",
    "sic_codes": "64",
@@ -133,7 +133,7 @@
   {
    "code": "J62",
    "file": "J62",
-   "name": "Computer Programming, Consultancy And Related Activities",
+   "name": "Computer programming, consultancy and related activities",
    "short_name": "Software & IT services",
    "emoji": "💻",
    "sic_codes": "62",
@@ -144,7 +144,7 @@
   {
    "code": "Q87 & Q88",
    "file": "Q87___Q88",
-   "name": "Residential Care & Social Work Activities",
+   "name": "Residential care & social work activities",
    "short_name": "Care homes & social work",
    "emoji": "🤝",
    "sic_codes": "87, 88",
@@ -155,7 +155,7 @@
   {
    "code": "K66",
    "file": "K66",
-   "name": "Activities Auxiliary To Financial Services And Insurance Activities",
+   "name": "Activities auxiliary to financial services and insurance activities",
    "short_name": "Fund management & brokers",
    "emoji": "📈",
    "sic_codes": "66",
@@ -166,7 +166,7 @@
   {
    "code": "I56",
    "file": "I56",
-   "name": "Food And Beverage Service Activities",
+   "name": "Food and beverage service activities",
    "short_name": "Restaurants, pubs & catering",
    "emoji": "🍔",
    "sic_codes": "56",
@@ -199,7 +199,7 @@
   {
    "code": "M70",
    "file": "M70",
-   "name": "Activities Of Head Offices; Management Consultancy Activities",
+   "name": "Activities of head offices; management consultancy activities",
    "short_name": "Head offices & consultancy",
    "emoji": "👔",
    "sic_codes": "70",
@@ -232,7 +232,7 @@
   {
    "code": "G45",
    "file": "G45",
-   "name": "Wholesale And Retail Trade And Repair Of Motor Vehicles And Motorcycles",
+   "name": "Wholesale and retail trade and repair of motor vehicles and motorcycles",
    "short_name": "Motor trades",
    "emoji": "🚙",
    "sic_codes": "45",
@@ -254,7 +254,7 @@
   {
    "code": "M71",
    "file": "M71",
-   "name": "Architectural And Engineering Activities; Technical Testing And Analysis",
+   "name": "Architectural and engineering activities; technical testing and analysis",
    "short_name": "Architecture & engineering",
    "emoji": "📐",
    "sic_codes": "71",
@@ -265,7 +265,7 @@
   {
    "code": "N78",
    "file": "N78",
-   "name": "Employment Activities",
+   "name": "Employment activities",
    "short_name": "Employment agencies",
    "emoji": "🪪",
    "sic_codes": "78",
@@ -276,7 +276,7 @@
   {
    "code": "N82",
    "file": "N82",
-   "name": "Office Administrative, Office Support And Other Business Support Activities",
+   "name": "Office administrative, office support and other business support activities",
    "short_name": "Office & business support",
    "emoji": "📋",
    "sic_codes": "82",
@@ -287,7 +287,7 @@
   {
    "code": "N77",
    "file": "N77",
-   "name": "Rental And Leasing Activities",
+   "name": "Rental and leasing activities",
    "short_name": "Rental & leasing",
    "emoji": "🔑",
    "sic_codes": "77",
@@ -298,7 +298,7 @@
   {
    "code": "H52",
    "file": "H52",
-   "name": "Warehousing And Support Activities For Transportation",
+   "name": "Warehousing and support activities for transportation",
    "short_name": "Warehousing & logistics",
    "emoji": "🗄️",
    "sic_codes": "52",
@@ -320,7 +320,7 @@
   {
    "code": "M72",
    "file": "M72",
-   "name": "Scientific Research And Development",
+   "name": "Scientific research and development",
    "short_name": "Scientific R&D",
    "emoji": "🔬",
    "sic_codes": "72",
@@ -331,7 +331,7 @@
   {
    "code": "B06 & B07",
    "file": "B06___B07",
-   "name": "Extraction Of Crude Petroleum And Natural Gas & Mining Of Metal Ores",
+   "name": "Extraction of crude petroleum and natural gas & mining of metal ores",
    "short_name": "Oil, gas & metal ores",
    "emoji": "🛢️",
    "sic_codes": "06, 07",
@@ -342,7 +342,7 @@
   {
    "code": "M73",
    "file": "M73",
-   "name": "Advertising And Market Research",
+   "name": "Advertising and market research",
    "short_name": "Advertising & market research",
    "emoji": "📣",
    "sic_codes": "73",
@@ -353,7 +353,7 @@
   {
    "code": "S96",
    "file": "S96",
-   "name": "Other Personal Service Activities",
+   "name": "Other personal service activities",
    "short_name": "Personal services",
    "emoji": "💇",
    "sic_codes": "96",
@@ -364,7 +364,7 @@
   {
    "code": "C21",
    "file": "C21",
-   "name": "Manufacture Of Basic Pharmaceutical Products And Pharmaceutical Preparations",
+   "name": "Manufacture of basic pharmaceutical products and pharmaceutical preparations",
    "short_name": "Pharmaceuticals",
    "emoji": "💊",
    "sic_codes": "21",
@@ -375,7 +375,7 @@
   {
    "code": "J59 & J60",
    "file": "J59___J60",
-   "name": "Motion Picture, Video & TV Programme Production, Sound Recording & Music Publishing Activities & Programming And Broadcasting Activities",
+   "name": "Motion picture, video & TV programme production, sound recording & music publishing activities & programming and broadcasting activities",
    "short_name": "Film, TV & radio",
    "emoji": "🎬",
    "sic_codes": "59, 60",
@@ -408,7 +408,7 @@
   {
    "code": "C26",
    "file": "C26",
-   "name": "Manufacture Of Computer, Electronic And Optical Products",
+   "name": "Manufacture of computer, electronic and optical products",
    "short_name": "Computers & electronics",
    "emoji": "🖥️",
    "sic_codes": "26",
@@ -419,7 +419,7 @@
   {
    "code": "N81",
    "file": "N81",
-   "name": "Services To Buildings And Landscape Activities",
+   "name": "Services to buildings and landscape activities",
    "short_name": "Cleaning & grounds services",
    "emoji": "🧹",
    "sic_codes": "81",
@@ -430,7 +430,7 @@
   {
    "code": "R93",
    "file": "R93",
-   "name": "Sports Activities And Amusement And Recreation Activities",
+   "name": "Sports activities and amusement and recreation activities",
    "short_name": "Sport & recreation",
    "emoji": "⚽",
    "sic_codes": "93",
@@ -441,7 +441,7 @@
   {
    "code": "A01",
    "file": "A01",
-   "name": "Crop And Animal Production, Hunting And Related Service Activities",
+   "name": "Crop and animal production, hunting and related service activities",
    "short_name": "Farming",
    "emoji": "🌾",
    "sic_codes": "01",
@@ -452,7 +452,7 @@
   {
    "code": "C28",
    "file": "C28",
-   "name": "Manufacture Of Machinery And Equipment N.E.C.",
+   "name": "Manufacture of machinery and equipment n.e.c.",
    "short_name": "Machinery",
    "emoji": "⚙️",
    "sic_codes": "28",
@@ -463,7 +463,7 @@
   {
    "code": "C29",
    "file": "C29",
-   "name": "Manufacture Of Motor Vehicles, Trailers And Semi-Trailers",
+   "name": "Manufacture of motor vehicles, trailers and semi-trailers",
    "short_name": "Motor vehicles",
    "emoji": "🚗",
    "sic_codes": "29",
@@ -474,7 +474,7 @@
   {
    "code": "H53",
    "file": "H53",
-   "name": "Postal And Courier Activities",
+   "name": "Postal and courier activities",
    "short_name": "Post & couriers",
    "emoji": "📬",
    "sic_codes": "53",
@@ -485,7 +485,7 @@
   {
    "code": "J58",
    "file": "J58",
-   "name": "Publishing Activities",
+   "name": "Publishing activities",
    "short_name": "Publishing",
    "emoji": "📚",
    "sic_codes": "58",
@@ -496,7 +496,7 @@
   {
    "code": "M74",
    "file": "M74",
-   "name": "Other Professional, Scientific And Technical Activities",
+   "name": "Other professional, scientific and technical activities",
    "short_name": "Design, photography & other",
    "emoji": "📷",
    "sic_codes": "74",
@@ -507,7 +507,7 @@
   {
    "code": "J63",
    "file": "J63",
-   "name": "Information Service Activities",
+   "name": "Information service activities",
    "short_name": "Data & information services",
    "emoji": "🌐",
    "sic_codes": "63",
@@ -518,7 +518,7 @@
   {
    "code": "N79",
    "file": "N79",
-   "name": "Travel Agency, Tour Operator And Other Reservation Service And Related Activities",
+   "name": "Travel agency, tour operator and other reservation service and related activities",
    "short_name": "Travel agents & tour operators",
    "emoji": "🧳",
    "sic_codes": "79",
@@ -540,7 +540,7 @@
   {
    "code": "E38",
    "file": "E38",
-   "name": "Waste Collection, Treatment And Disposal Activities; Materials Recovery",
+   "name": "Waste collection, treatment and disposal activities; materials recovery",
    "short_name": "Waste collection & disposal",
    "emoji": "♻️",
    "sic_codes": "38",
@@ -551,7 +551,7 @@
   {
    "code": "R90",
    "file": "R90",
-   "name": "Creative, Arts And Entertainment Activities",
+   "name": "Creative, arts and entertainment activities",
    "short_name": "Arts & entertainment",
    "emoji": "🎭",
    "sic_codes": "90",
@@ -562,7 +562,7 @@
   {
    "code": "C22",
    "file": "C22",
-   "name": "Manufacture Of Rubber And Plastic Products",
+   "name": "Manufacture of rubber and plastic products",
    "short_name": "Rubber & plastics",
    "emoji": "🧴",
    "sic_codes": "22",
@@ -573,7 +573,7 @@
   {
    "code": "S94",
    "file": "S94",
-   "name": "Activities Of Membership Organisations",
+   "name": "Activities of membership organisations",
    "short_name": "Membership organisations",
    "emoji": "👥",
    "sic_codes": "94",
@@ -595,7 +595,7 @@
   {
    "code": "E36",
    "file": "E36",
-   "name": "Water Collection, Treatment And Supply",
+   "name": "Water collection, treatment and supply",
    "short_name": "Water supply",
    "emoji": "🚰",
    "sic_codes": "36",
@@ -639,7 +639,7 @@
   {
    "code": "C1101T1106 & C12",
    "file": "C1101T1106___C12",
-   "name": "Manufacture of alcoholic beverages & Tobacco Products",
+   "name": "Manufacture of alcoholic beverages & tobacco products",
    "short_name": "Alcoholic drinks & tobacco",
    "emoji": "🍺",
    "sic_codes": "11.01-11.06, 12",
@@ -650,7 +650,7 @@
   {
    "code": "C33OTHER",
    "file": "C33OTHER",
-   "name": "Rest of repair; Installation - 33.11-14/17/19/20",
+   "name": "Rest of repair; installation - 33.11-14/17/19/20",
    "short_name": "Repair & installation",
    "emoji": "🛠️",
    "sic_codes": "33.11-33.14, 33.17, 33.19, 33.20",
@@ -661,7 +661,7 @@
   {
    "code": "M75",
    "file": "M75",
-   "name": "Veterinary Activities",
+   "name": "Veterinary activities",
    "short_name": "Vets",
    "emoji": "🐕",
    "sic_codes": "75",
@@ -672,7 +672,7 @@
   {
    "code": "H50",
    "file": "H50",
-   "name": "Water Transport",
+   "name": "Water transport",
    "short_name": "Shipping",
    "emoji": "🚢",
    "sic_codes": "50",
@@ -683,7 +683,7 @@
   {
    "code": "C27",
    "file": "C27",
-   "name": "Manufacture Of Electrical Equipment",
+   "name": "Manufacture of electrical equipment",
    "short_name": "Electrical equipment",
    "emoji": "🔌",
    "sic_codes": "27",
@@ -705,7 +705,7 @@
   {
    "code": "C32",
    "file": "C32",
-   "name": "Other Manufacturing",
+   "name": "Other manufacturing",
    "short_name": "Other manufacturing",
    "emoji": "🧸",
    "sic_codes": "32",
@@ -716,7 +716,7 @@
   {
    "code": "R92",
    "file": "R92",
-   "name": "Gambling And Betting Activities",
+   "name": "Gambling and betting activities",
    "short_name": "Gambling & betting",
    "emoji": "🎰",
    "sic_codes": "92",
@@ -738,7 +738,7 @@
   {
    "code": "C18",
    "file": "C18",
-   "name": "Printing And Reproduction Of Recorded Media",
+   "name": "Printing and reproduction of recorded media",
    "short_name": "Printing",
    "emoji": "🖨️",
    "sic_codes": "18",
@@ -749,7 +749,7 @@
   {
    "code": "C31",
    "file": "C31",
-   "name": "Manufacture Of Furniture",
+   "name": "Manufacture of furniture",
    "short_name": "Furniture",
    "emoji": "🪑",
    "sic_codes": "31",
@@ -760,7 +760,7 @@
   {
    "code": "N80",
    "file": "N80",
-   "name": "Security And Investigation Activities",
+   "name": "Security and investigation activities",
    "short_name": "Security & investigation",
    "emoji": "🔒",
    "sic_codes": "80",
@@ -771,7 +771,7 @@
   {
    "code": "C16",
    "file": "C16",
-   "name": "Manufacture Of Wood & Products Of Wood & Cork, Except Furniture; Manuf. Of Articles Of Straw",
+   "name": "Manufacture of wood & products of wood & cork, except furniture; manuf. of articles of straw",
    "short_name": "Wood & cork products",
    "emoji": "🪵",
    "sic_codes": "16",
@@ -782,7 +782,7 @@
   {
    "code": "H51",
    "file": "H51",
-   "name": "Air Transport",
+   "name": "Air transport",
    "short_name": "Air transport",
    "emoji": "✈️",
    "sic_codes": "51",
@@ -793,7 +793,7 @@
   {
    "code": "C17",
    "file": "C17",
-   "name": "Manufacture Of Paper And Paper Products",
+   "name": "Manufacture of paper and paper products",
    "short_name": "Paper products",
    "emoji": "🧻",
    "sic_codes": "17",
@@ -837,7 +837,7 @@
   {
    "code": "C13",
    "file": "C13",
-   "name": "Manufacture Of Textiles",
+   "name": "Manufacture of textiles",
    "short_name": "Textiles",
    "emoji": "🧵",
    "sic_codes": "13",
@@ -859,7 +859,7 @@
   {
    "code": "S95",
    "file": "S95",
-   "name": "Repair Of Computers And Personal And Household Goods",
+   "name": "Repair of computers and personal and household goods",
    "short_name": "Repair of computers & goods",
    "emoji": "🧰",
    "sic_codes": "95",
@@ -881,7 +881,7 @@
   {
    "code": "T97",
    "file": "T97",
-   "name": "Activities Of Households As Employers Of Domestic Personnel",
+   "name": "Activities of households as employers of domestic personnel",
    "short_name": "Households employing staff",
    "emoji": "🧺",
    "sic_codes": "97",
@@ -892,7 +892,7 @@
   {
    "code": "C19",
    "file": "C19",
-   "name": "Manufacture Of Coke And Refined Petroleum Products",
+   "name": "Manufacture of coke and refined petroleum products",
    "short_name": "Refined petroleum",
    "emoji": "⛽",
    "sic_codes": "19",
@@ -925,7 +925,7 @@
   {
    "code": "R91",
    "file": "R91",
-   "name": "Libraries, Archives, Museums And Other Cultural Activities",
+   "name": "Libraries, archives, museums and other cultural activities",
    "short_name": "Libraries & museums",
    "emoji": "🖼️",
    "sic_codes": "91",
@@ -936,7 +936,7 @@
   {
    "code": "B08",
    "file": "B08",
-   "name": "Other Mining And Quarrying",
+   "name": "Other mining and quarrying",
    "short_name": "Quarrying & other mining",
    "emoji": "🪨",
    "sic_codes": "08",
@@ -1002,7 +1002,7 @@
   {
    "code": "C14",
    "file": "C14",
-   "name": "Manufacture Of Wearing Apparel",
+   "name": "Manufacture of wearing apparel",
    "short_name": "Clothing",
    "emoji": "👕",
    "sic_codes": "14",
@@ -1024,7 +1024,7 @@
   {
    "code": "B09",
    "file": "B09",
-   "name": "Mining Support Service Activities",
+   "name": "Mining support service activities",
    "short_name": "Mining support",
    "emoji": "🔧",
    "sic_codes": "09",
@@ -1090,7 +1090,7 @@
   {
    "code": "A02",
    "file": "A02",
-   "name": "Forestry And Logging",
+   "name": "Forestry and logging",
    "short_name": "Forestry",
    "emoji": "🌲",
    "sic_codes": "02",
@@ -1101,7 +1101,7 @@
   {
    "code": "A03",
    "file": "A03",
-   "name": "Fishing And Aquaculture",
+   "name": "Fishing and aquaculture",
    "short_name": "Fishing & fish farming",
    "emoji": "🐟",
    "sic_codes": "03",
@@ -1134,7 +1134,7 @@
   {
    "code": "E39",
    "file": "E39",
-   "name": "Remediation Activities And Other Waste Management Services",
+   "name": "Remediation activities and other waste management services",
    "short_name": "Site remediation",
    "emoji": "🚧",
    "sic_codes": "39",
@@ -1145,7 +1145,7 @@
   {
    "code": "C15",
    "file": "C15",
-   "name": "Manufacture Of Leather And Related Products",
+   "name": "Manufacture of leather and related products",
    "short_name": "Leather & footwear",
    "emoji": "👞",
    "sic_codes": "15",
@@ -1167,7 +1167,7 @@
   {
    "code": "B05",
    "file": "B05",
-   "name": "Mining Of Coal And Lignite",
+   "name": "Mining of coal and lignite",
    "short_name": "Coal mining",
    "emoji": "⛏️",
    "sic_codes": "05",
