@@ -1,7 +1,7 @@
 // The bookcase, in 2D: one shelf per kind of industry, spheres resting on it largest to smallest, left to right,
 // each with an emoji and a specimen tag. Drawn as SVG in screen pixels (Common Wealth kit rule: chart text never
 // scales), so text stays crisp and readable at any size and the page scrolls natively on phones.
-import { openPanel, closePanel, onPanelClose, setPage } from './panel.js';
+import { openPanel, closePanel, onPanelClose, setPage, money } from './panel.js';
 
 const SVGNS = 'http://www.w3.org/2000/svg';
 const MOBILE = matchMedia('(max-width: 759px)');
@@ -26,7 +26,6 @@ const { meta, industries } = await (await fetch('data/industries.json')).json();
 await document.fonts.load(TAG_FONT);
 await document.fonts.ready;
 
-const money = (m) => m >= 1e6 ? `$${(m / 1e6).toFixed(2)}tn` : `$${Math.round(m / 1e3).toLocaleString()}bn`;
 const vaMax = industries[0].value_added;
 const measure = document.createElement('canvas').getContext('2d');
 measure.font = TAG_FONT;
