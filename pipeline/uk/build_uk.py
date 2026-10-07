@@ -147,7 +147,12 @@ sec['MI'] = sec['GOS & MI'] - sec.GOS
 check('mixed-income back-solve: sum of section GOS vs Blue Book GOS', sec.GOS.sum(), PUB['gos'], 50)
 check('mixed-income back-solve: sum of section mixed income vs Blue Book mixed income', sec.MI.sum(), PUB['mi'], 50)
 assert sec.MI.min() > -1, f'negative section mixed income: {sec.MI.min()}'
-x['MI'] = [sec.MI[s] * g / sec['GOS & MI'][s] if sec['GOS & MI'][s] else 0.0 for s, g in zip(x.section, x['GOS & MI'])]
+# Owner-occupiers' imputed rent (L68A) is household operating surplus, not mixed income, so it takes no share of section L's
+# mixed income; the section's mixed income goes to the other real-estate industries (Claude, 2026-10-07, under Alex's sign-off).
+NO_MI = {'L68A'}
+x['mi_weight'] = [0.0 if c in NO_MI else g for c, g in zip(x.index, x['GOS & MI'])]
+wsum = x.groupby('section').mi_weight.sum()
+x['MI'] = [sec.MI[s] * w / wsum[s] if wsum[s] else 0.0 for s, w in zip(x.section, x.mi_weight)]
 x['lab_mi'] = [m * ls[s] for m, s in zip(x.MI, x.section)]
 x['L'] = x.D1 + x.lab_mi
 x['K'] = x.GVA - x.L
@@ -454,7 +459,7 @@ for code in x.sort_values('GVA', ascending=False).index:
     ashe_cov.append((code, cover))
     # education
     if code == 'L68A':
-        notes.append('Owner-occupiers\' imputed rent is household operating surplus, but the pro rata spread of section L mixed income above still gives this industry GBP %s m of mixed income (a side effect of the assumption; the alternative is to leave it out and give the section\'s mixed income to the other two real-estate industries).' % f'{r.MI:,.0f}')
+        notes.append('Owner-occupiers\' imputed rent is household operating surplus, not mixed income, so this industry takes no share of section L\'s mixed income (it goes to the other two real-estate industries). Labour here is compensation of employees only, and capital is the rest of value added.')
     cg = ml.cali_group
     cshare = float(col[cg])
     L_edu = {'College': float(r.L * cshare), 'Non-college': float(r.L * (1 - cshare))}
