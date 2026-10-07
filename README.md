@@ -1,121 +1,93 @@
-# KLEMS Viewer
+# KLEMS Viewer UK
 
-The US economy in 2017 as a bookcase of 63 industries. Each sphere is sized by value added. Click one to see its production function as seven pages:
+The UK economy in 2023 as a bookcase of 104 industries. Each sphere is sized by gross value added. Select one to see its production function on seven pages:
 
 - **Overview**
 - **K**: capital
-- **L**: labor
+- **L**: labour
 - **E**: energy
 - **M**: materials
 - **S**: purchased services
 - **C**: carbon, an output
 
-Internal demo, Common Wealth / Green Planning Commission.
-- **Static site:** `index.html` + `js/` + `data/`, built by `pipeline/`.
-- **2D SVG, laid out in screen pixels,** so text stays crisp and the page scrolls natively on phones. On a phone, tapping a sphere opens its readout below the bookcase.
-- **Styled with the Common Wealth web kit** in `cw/`: tokens, base CSS and the CW monogram. The fonts are Archivo, Inter and JetBrains Mono, all SIL OFL 1.1, with licences in `cw/fonts/`.
+It is the UK twin of the US KLEMS Viewer, an internal demo from Common Wealth / Green Planning Commission, in the Common Wealth web style.
 
-## Sources (all 2017)
+- **Static site:** `index.html` + `js/` + `data/`, built by `pipeline/uk/build_uk.py` from a local data library that is not in this repo.
+- **Drawing:** 2D SVG in screen pixels.
+- **Style:** the Common Wealth kit, in `cw/`. Fonts are Archivo, Inter and JetBrains Mono, all SIL OFL 1.1, with licences in `cw/fonts/`.
+
+## Sources (2023, current prices, £ million)
+
+All are Office for National Statistics publications under the Open Government Licence v3.0.
 
 | Page | Source | Vintage |
 |---|---|---|
-| Spheres, Overview, K and L income | BEA-BLS Integrated Industry-Level Production Account (KLEMS) | released 2025-04-25 |
-| K stock | BLS Total Factor Productivity, Capital Details | pulled 2026-06-17 |
-| L occupations | BLS OEWS, national industry-specific estimates | May 2017 |
-| E, M, S | BEA Use table, before redefinitions, detail, purchasers' prices | 2017 benchmark |
-| C | EPA USEEIO v2.5, model kingbird-17, IPCC AR6 GWP-100 | published 2025-04-16 |
+| Spheres, Overview, K and L income, E/M/S | Supply and use tables | Blue Book 2025 |
+| L split of self-employed income | Labour costs and labour income (labour share by SIC section) | 18 Aug 2026 |
+| L college / non-college | Composition-adjusted labour input (CALI), pay shares by qualification | 23 May 2025 edition (official statistics in development) |
+| K stock, depreciation | Capital stocks and fixed capital consumption | 27 Nov 2025 |
+| K investment | Gross fixed capital formation by industry and asset | Blue Book 2025 |
+| L jobs, pay, occupations | Annual Survey of Hours and Earnings (ASHE), Tables 4 and 29 | 2023 revised |
+| C | Environmental accounts, greenhouse gas emissions by industry | residence basis, 2023 |
 
 ## Every mapping and conversion
 
-**Industry codes**
+**Industries**
 
 | From → to | How |
 |---|---|
-| **KLEMS industry (63)**, the spine | BEA production-account codes (`111CA`, `325`, `GF`, …), from the account's own NAICS mapping sheet |
-| KLEMS → BLS capital-detail sector (61) | NAICS ranges (`311-312`, `44,45`, …), matched by name: 61/61 private industries. Government has no BLS capital detail. `pipeline/crosswalk.csv` |
-| KLEMS → OEWS industry + ownership (62) | 2017 OEWS codes (NAICS 2012 basis) in `pipeline/crosswalk.csv`. Rules below this table. |
-| BEA detail I-O industry (402) → BEA summary (71) | EPA USEEIO `sector_crosswalk.csv` (`bea_detail` → `bea_summary`) |
-| BEA summary (71) → KLEMS (63) | 58 codes identical. 13 merge: `441 445 452 4A0` → `44RT`; `622 623` → `622HO`; `HS ORE` → `531`; `GFGD GFGN GFE` → `GF`; `GSLG GSLE` → `GSL` |
-| EPA USEEIO summary sector (71) → KLEMS (63) | Same 13 merges (EPA uses BEA summary codes) |
+| **Industry (104)**, the spine | ONS supply-use industry codes (`A01` … `T97`), with SIC 2007 codes read from each code and description. `pipeline/uk/industries_uk.csv` |
+| Industry → shelf (16 kinds of industry) | By SIC section, using the same 16 groups as the US viewer. Manufacturing is split nondurable / durable on the US list. Judgement calls are in `pipeline/uk/README.md`: computer programming sits in Information and rental & leasing in Professional services (following SIC; the US places them differently); water supply and sewerage in Utilities, waste in Professional & business; motor trades in Retail. |
+| Industry → capital-stock code | `pipeline/uk/map_capital.csv`. 44 industries have their own ONS code; 60 share a wider ONS code, and their stock, investment and depreciation figures are for the whole group (named on the page). Real estate's stock is in ONS code `L`. |
+| Industry → ASHE | `pipeline/uk/map_labour.csv`. Table 4 division: 67 own, 33 shared, 2 partial, 2 none (`B05`; `L68A` has no employees). Table 29: the industry's SIC section. |
+| Industry → CALI group, labour-share section | `pipeline/uk/map_labour.csv`: 10 CALI groups; 20 SIC sections |
+| Industry → emissions | `pipeline/uk/map_emissions.csv`. 100 map exactly to ONS groups. `C14`, `C31` and `E36` are suppressed by ONS (shown as not published). `L68A` (imputed rent) has none. |
+| Product (CPA) → shelf band on E/M/S pages | The producing industry's shelf (`pipeline/uk/map_product_industry.csv`) |
 
-OEWS rules for the KLEMS → OEWS row:
-- Private industries use private ownership (`5`).
-- `713` and `721` exist only as private + local government (`57`) and are used as is.
-- Federal = `999101`; State & local = `999201` + `999301`, including government schools and hospitals.
-- Farms: none, because OEWS doesn't survey them.
-- Fishing (`114`) is absent from 2017.
-
-**Grouping**
-
-| From → to | How |
-|---|---|
-| KLEMS industry → shelf (16 kinds of industry) | BEA sector from the EPA crosswalk, with manufacturing split. Nondurable: `311FT 313TT 315AL 322 323 324 325 326`; the rest of manufacturing is durable. A merged KLEMS industry takes its parts' sector. |
-| I-O commodity (394) → group → band (E/M/S tables) | Detail commodity → BEA summary commodity (EPA crosswalk) → BEA sector (same 16 bands, plus "Noncomparable imports & adjustments" and "Scrap & used goods") |
-| Occupation (SOC 2010) → supervisory / nonsupervisory | Supervisory = SOC major group 11 (management) + the 18 occupations titled "…Supervisors…". Everything else is nonsupervisory. |
-
-**E / M / S classification of purchases**
-
-BEA assigns E, M and S at an unpublished finer level, so this is an approximation. It is shown beside BEA's published totals, never scaled to them.
-
-| Commodity | Class |
-|---|---|
-| `211000` oil & gas, `212100` coal, `221100` electric power, `221200` natural gas distribution, `324110` refineries | **E** |
-| … except crude and petroleum products (`211000 324110 324121 324122 324190`) bought by refining (`324`) or chemicals (`325`); and `211000` bought by oil & gas extraction (`211`) | **M** (feedstock / own use) |
-| Every other commodity coded `1…`, `2…` or `3…` except construction `23…` (this includes water & sewage, `221300`) | **M** |
-| Everything else: construction, trade, transport, services, government, noncomparable imports, scrap & used, rest-of-world adjustment | **S** |
-
-**Value conversions**
+**Value**
 
 | Quantity | Conversion |
 |---|---|
-| Value added (sphere size) | Production-account value added = capital + labor compensation. It is not GDP-by-industry value added: the 63 sum to $19,762bn vs $19,612bn GDP. Sphere area ∝ value added. |
-| K by asset class | Six tangible classes + intellectual property (software + R&D + artistic originals, from K by type) = K |
-| Capital stocks | BLS 2017 chained dollars = current dollars, since 2017 is the base year, so asset stocks add up. Shares of capital income are fractions. |
-| Wages across merged industries | Jobs summed. Mean wage weighted by jobs. Medians and percentiles are not combinable, so not shown. Wage bill = jobs × mean wage, set against KLEMS labor compensation. |
-| OEWS repeated rows | Duplicate (code, ownership, occupation) rows dropped after checking that no two published values disagree |
-| Purchases | Purchasers' prices: margins folded into goods, as BEA values KLEMS inputs. Each industry's total = production-account E + M + S within 0.2%. |
-| Emissions by gas | Direct = EPA `B` (kg per $, by flow) × output `x` × AR6 GWP. Flows grouped as CO₂, methane, nitrous oxide, fluorinated (all HFCs, PFCs, SF₆, NF₃). Sum over gases = EPA `D·x`. |
-| Emissions per dollar | Direct `D`, and with supply chain `N` (kg CO₂e per $ of EPA output), averaged over a merged industry by output. Supply-chain figures are never summed across industries. |
-| Short names, emoji | `pipeline/short_names.csv`, `pipeline/emoji.csv` (editable) |
+| Value added (sphere size) | GVA at basic prices = compensation of employees (D1) + gross operating surplus and mixed income + taxes less subsidies on production. The 104 sum to £2,497,390m, equal to Blue Book 2025. Sphere area ∝ GVA. |
+| Labour (L) | D1 + the labour part of mixed income. Each section's mixed income is back-solved from its published labour share (GOS = D1 × (1 / share − 1); mixed income = GOS & MI − GOS), then multiplied by the labour share. The sections' totals reproduce Blue Book GOS and mixed income within £18m. Mixed income is spread over a section's industries pro rata to their GOS & MI, except owner-occupiers' imputed rent (`L68A`), which takes none. |
+| Capital (K) | GVA − L, so it includes taxes less subsidies on production. It is negative where subsidies exceed operating surplus (rail −£1,271m; `B05` −£5m). |
+| College / non-college | The industry's CALI group pay shares × L. College = degree or higher (HQ5 + HQ6); HQ4 (higher education below degree) counts as non-college. |
+| E / M / S | Each product's 2023 intermediate use, sorted by rule:<br>• Energy = `CPA_B05`, `CPA_B06 & B07`, `CPA_C19`, `CPA_D351`, `CPA_D352_3`, except crude and refined products bought by refining and chemicals, and oil and gas bought by oil and gas extraction, which count as materials.<br>• Every other good (CPA A, B, C) is materials.<br>• Everything else is services.<br>Totals: E £261,534m, M £714,964m, S £1,345,918m. Each industry's E + M + S = its intermediate use exactly. |
+| Capital stock | Net and gross stock, current prices. Depreciation rate = CFC / net stock: 45 industries have CFC at their own coverage; 59 use their CAPSTK group's rate. |
+| Jobs and pay | ASHE 2023 revised, all employees, gross annual pay. Jobs are ONS weighted counts (thousands × 1,000). Mean pay. |
+| Supervisory / nonsupervisory | SOC 2020 major group 1 (managers, directors and senior officials: sub-major groups 11 and 12) vs the other sub-major groups. That is the only split ASHE Table 29's detail allows. |
+| Emissions | kt CO₂e (ONS) → tonnes. Grouped as CO₂, methane, nitrous oxide, fluorinated (HFC, PFC, SF₆, NF₃). Per £ = direct emissions / gross output. |
 
 ## Caveats (kept here, not on the pages)
 
-**Value added**
-- Sphere size uses the production account's value added (capital + labor compensation), not GDP-by-industry value added: the 63 sum to $19,762bn vs $19,612bn GDP.
-  - Government comes out larger than in GDP. State & local is $2,352bn vs $1,689bn, with large capital compensation.
-  - Trade and other industries come out smaller; the gaps track their taxes on production.
-  - BEA's documentation does not state the cause.
-
-**K: capital**
-- BLS capital details cover private industries only, so Federal and State & local have no asset-level capital.
-- Stocks and investment are in 2017 dollars (equal to current dollars in the base year). Depreciation is the wealth-stock rate.
-- BLS's own capital-cost estimate differs from the production account's K and is not shown.
-
-**L: labor**
-- OEWS counts wages and salaries of employees only. KLEMS labor compensation also covers benefits and the self-employed, so "wages cover" is below 100% (33–98%, median 61%).
-- Occupations OEWS suppresses are in the total jobs but in neither column.
-- `n/p` = wage not published (suppressed or top-coded; the source data cannot tell which).
-- Supervisory is an occupation-based definition (above). It is narrower than BLS's CES "production and nonsupervisory" split: 9.9% of jobs here vs 17.6% of private jobs in CES, May 2017.
-- Farms have no occupation data; OEWS does not survey crop and animal production.
-- `713` and `721` use OEWS's private + local government row, so a few local-government jobs are also counted in State & local (+0.2% on the private total).
-
-**E / M / S: purchases**
-- Every dollar row is a published BEA Use-table cell, or a sum of cells. Nothing is estimated or allocated.
-- The approximation is only which page a commodity sits on (rules above). So a page's listed total can differ from BEA's published E, M or S for the industry.
-  - Economy-wide: E +1.0%, M +1.0%, S −0.7%.
-  - Within 5% for 49 (E), 44 (M) and 42 (S) of 63 industries.
-  - Largest misses: chemicals' E (66% of published), air transport's M (199%).
-- Across the three pages, the totals equal BEA's published E + M + S within 0.2%.
-- "Share" is a share of the page's listed total.
-
-**C: carbon**
-- These are emissions EPA attributes to industries. Households' own emissions (cars, home heating) are not in any industry: industry CO₂ is 73% of EIA's total 2017 energy CO₂.
-- Per-dollar figures use EPA's own 2017 output, which differs from the production account's gross output for a few industries (State & local 0.80×, retail 1.13×).
-- Public power is in the government-enterprise industries (`GSLE`, `GFE` → State & local, Federal), not in Utilities.
-
-**Codes**
-- BEA lists `511` as NAICS 511 and 516; 516 does not exist after 2007.
+- **No published UK KLEMS account exists for 2023.** The account here is built from the supply-use tables by the rules above. ONS's own productivity accounts are coarser (16–19 industries), index-only, or under review.
+- **E / M / S:** there is no published UK split to compare against.
+  - `CPA_B06 & B07` combines crude oil and gas with metal ores, and `CPA_D352_3` includes steam and air conditioning.
+  - Mining support (`B09`) and repair services (`C33`) count as materials under the rule.
+  - Owner-occupiers' imputed rent buys −£20.8bn of financial services: this is how the accounts allocate banks' interest margins (FISIM).
+- **Capital:**
+  - The UK publishes 13 asset types per industry (the US viewer shows 27–77); no land and no inventories.
+  - No productive stock or user cost by industry × asset for recent years, so no share of capital income by asset.
+  - 60 industries' figures are for a wider ONS group.
+  - One depreciation rate rounds to 100% (transport equipment `C13T15`: £6m on £6m).
+  - ONS revises other buildings and structures upward in its June 2026 preliminary release (not used here).
+- **Labour:**
+  - ASHE counts employee jobs only, rounded to thousands and "indicative only"; it excludes the self-employed.
+  - The ASHE wage bill (jobs × mean annual pay) is compared with D1 for the same ASHE industry basis. Nationally it is about 61% of D1: D1 also includes employer social contributions.
+  - Occupation groups are 26 SOC 2020 sub-major groups per SIC section (the US viewer lists every detailed occupation per industry). Suppressed cells are shown as not published. Section B (mining) has none.
+  - College / non-college shares are applied at CALI's 10 industry groups.
+- **Carbon:**
+  - Residence basis, direct emissions only. There is no supply-chain figure (it would need a Leontief calculation on the UK input-output tables).
+  - Industry emissions total 357,757 kt; households' own 121,958 kt are not in any industry.
+  - Three groups are suppressed by ONS (676 kt).
+- **Labels** (short names, emoji, shelves) are Claude's drafts in `pipeline/uk/`, for editing.
 
 ## Rebuild
 
-`pipeline/build_industries.py` and `pipeline/build_readout.py` read from a local data library that is not in this repo. Each stops on a failed check: identities, totals, crosswalk coverage.
+`uv run --with pandas --with pyarrow python pipeline/uk/build_uk.py` rebuilds `data/` from the library. It stops on any failed check:
+- GVA, D1 and gross output = Blue Book 2025;
+- VA = K + L and GO = K + L + E + M + S for every industry;
+- the mixed-income back-solve;
+- net stock, CFC and GFCF totals = ONS;
+- ASHE jobs = Table 4;
+- emissions = ONS section totals less suppressed groups.
