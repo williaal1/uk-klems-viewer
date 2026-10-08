@@ -4,8 +4,15 @@ import os
 import pandas as pd
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-SUT = ("../../../../../Data Sources/Economics/National Accounts/Foreign Statistical Agencies/"
-       "ONS (UK)/uk-supply-use-tables/data/uk_sut_bb25.csv")
+def find_library(p=HERE):
+    """The local Data Sources library, found by walking up from this file."""
+    while not os.path.isdir(os.path.join(p, 'Data Sources')):
+        q = os.path.dirname(p)
+        assert q != p, 'Data Sources/ not found above ' + HERE
+        p = q
+    return os.path.join(p, 'Data Sources')
+SUT = os.path.join(find_library(), 'Economics', 'National Accounts', 'Foreign Statistical Agencies',
+                   'ONS (UK)', 'uk-supply-use-tables', 'data', 'uk_sut_bb25.csv')
 SECTORS = {'11', '21', '22', '23', '31ND', '33DG', '42', '44RT', '48TW', '51', 'FIRE', 'PROF', '6', '7', '81', 'G'}
 
 d = pd.read_csv(SUT, dtype=str, usecols=['year', 'table', 'col_code', 'col_desc', 'col_type'])
